@@ -10,4 +10,9 @@ class AppTextStyles {
     fontSize: 40.sp,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle styleMedium16 = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w500,
+      fontFamily: 'Montserrat',
+      color: const Color(0xff6D7379));
 }

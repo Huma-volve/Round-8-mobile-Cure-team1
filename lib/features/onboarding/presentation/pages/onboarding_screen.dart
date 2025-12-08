@@ -18,7 +18,7 @@ class OnboardingScreen extends StatelessWidget {
               ))
         ],
       ),
-      body: OnboardingViewBody(),
+      body: const OnboardingViewBody(),
     );
   }
 }

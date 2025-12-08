@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextStyles {
   // ==================== GEORGIA ====================
-  static const String _georgia = 'Georgian';
+  static const String _georgia = 'georgia';
 
   static TextStyle georgiaH1 = TextStyle(
     fontFamily: _georgia,

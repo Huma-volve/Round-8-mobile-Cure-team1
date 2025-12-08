@@ -10,5 +10,6 @@ extension BlocExtension on Bloc {
 
 /// Base class for all BLoCs
 abstract class BaseBloc<Event, State> extends Bloc<Event, State> {
+  // ignore: use_super_parameters
   BaseBloc(State initialState) : super(initialState);
 }

@@ -1,18 +1,20 @@
+import 'package:cure_team_1/core/constants/go_route.dart';
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class DocApp extends StatelessWidget {
+  const DocApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'cure_team_1',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: Container(),
       debugShowCheckedModeBanner: false,
+   
+   routerConfig: router,
     );
   }
 }

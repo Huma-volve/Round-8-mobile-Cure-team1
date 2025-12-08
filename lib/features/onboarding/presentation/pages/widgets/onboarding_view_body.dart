@@ -1,4 +1,4 @@
-import 'package:cure_team_1/core/utils/app_images.dart';
+import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,7 +14,7 @@ class OnboardingViewBody extends StatelessWidget {
         ),
         Center(
           child: Image.asset(
-            AppImages.onBoarding1,
+            Assets.resourceImagesOnboarding1,
             width: 340.w,
             height: 320.h,
           ),

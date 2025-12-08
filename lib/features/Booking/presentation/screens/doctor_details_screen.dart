@@ -1,4 +1,7 @@
+
+import 'package:cure_team_1/features/Booking/presentation/widgets/doctor_details_screen_body.dart';
 import 'package:flutter/material.dart';
+
 
 class DoctorDetailsScreen extends StatelessWidget {
   const DoctorDetailsScreen({super.key});
@@ -6,15 +9,7 @@ class DoctorDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-<<<<<<< HEAD
-      body:Column(
-        children: [
-
-        ],
-      ) ,
-=======
-      
->>>>>>> mohamedshaban
+      body: DoctorDetailsScreenBody(),
     );
   }
 }

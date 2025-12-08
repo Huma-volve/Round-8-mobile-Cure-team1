@@ -17,20 +17,24 @@ class AppTextStyles {
       fontFamily: 'Montserrat',
       color: const Color(0xff6D7379));
 
-       static TextStyle styleRegular24 = TextStyle(
-      fontSize: 24.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'Montserrat',
-      );
-        static TextStyle styleRegular20 = TextStyle(
-      fontSize: 20.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'Montserrat',
-      );
-        static TextStyle styleRegular14 = TextStyle(
+  static TextStyle styleRegular24 = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleRegular20 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleRegular14 = TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       fontFamily: 'Montserrat',
-      color: AppColors.blueGray
-      );
+      color: AppColors.blueGray);
+  static TextStyle styleMedium16White = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w500,
+      fontFamily: 'Montserrat',
+      color: Colors.white);
 }

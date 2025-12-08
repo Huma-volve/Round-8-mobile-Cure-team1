@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:cure_team_1/core/theme/app_colors.dart';
 import 'package:cure_team_1/core/utils/app_images.dart';
+import 'package:cure_team_1/features/Home/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () async {
       if (!mounted) return;
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const OnboardingScreen()));
+          MaterialPageRoute(builder: (_) => const HomePage()));
     });
   }
 

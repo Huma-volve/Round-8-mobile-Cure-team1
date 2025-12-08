@@ -34,3 +34,7 @@ fonts:
       fonts:
         - asset: assets/fonts/Montserrat-Medium.ttf
           weight: 500
+    - family: georgia
+      fonts:
+        - asset: assets/fonts/georgia.ttf
+          weight: 400      

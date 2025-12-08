@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   List<bool> dotVisible = [true, false, false, false];
   int activeIndex = 0;
   Timer? _timer;
+  final PageController pageController = PageController();
 
   @override
   void initState() {
@@ -38,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void dispose() {
     _timer?.cancel();
+    pageController.dispose();
     super.dispose();
   }
 
@@ -58,8 +60,8 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           Positioned(
             bottom: 0.08.sh,
-            child: AnimatedSmoothIndicator(
-              activeIndex: activeIndex,
+            child: SmoothPageIndicator(
+              controller: pageController,
               count: 4,
               effect: ScaleEffect(
                 activeDotColor: Colors.white,

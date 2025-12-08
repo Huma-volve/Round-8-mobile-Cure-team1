@@ -5,6 +5,8 @@ import 'package:cure_team_1/features/onboarding/data/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:cure_team_1/features/onboarding/presentation/pages/widgets/dots_indicator.dart';
+import 'package:go_router/go_router.dart';
+import 'package:cure_team_1/core/constants/app_route.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody(
@@ -52,7 +54,15 @@ class OnboardingViewBody extends StatelessWidget {
           CustomeButton(
               text: currentIndex == 1 ? 'Get Started' : 'Next',
               color: AppColors.primaryColor,
-              onTap: () {}),
+              onTap: () {
+                if (currentIndex == 1) {
+                  GoRouter.of(context).pushReplacement(AppRoute.loginPage);
+                } else {
+                  pageController.nextPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeIn);
+                }
+              }),
           SizedBox(
             height: 20.h,
           )

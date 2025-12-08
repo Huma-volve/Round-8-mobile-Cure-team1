@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:cure_team_1/core/theme/app_colors.dart';
 import 'package:cure_team_1/core/utils/app_images.dart';
+import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -50,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Center(
             child: Image.asset(
-              AppImages.logoSplash,
+              Assets.resourceImagesIconSplash,
               width: 0.18.sw,
               height: 0.18.sw,
               color: Colors.white,

@@ -1,10 +1,18 @@
 import 'package:cure_team_1/core/theme/app_text_styles.dart';
+import 'package:cure_team_1/features/onboarding/data/onboarding_model.dart';
 import 'package:cure_team_1/features/onboarding/presentation/pages/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 
-class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
+class OnboaedingScreen extends StatefulWidget {
+  const OnboaedingScreen({super.key});
 
+  @override
+  State<OnboaedingScreen> createState() => _OnboaedingScreenState();
+}
+
+class _OnboaedingScreenState extends State<OnboaedingScreen> {
+  final PageController pageController = PageController();
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +26,28 @@ class OnboardingScreen extends StatelessWidget {
               ))
         ],
       ),
-      body: OnboardingViewBody(),
+      body: Column(
+        children: [
+          Expanded(
+            child: PageView.builder(
+              controller: pageController,
+              itemCount: OnboardingModel.onboardingView.length,
+              onPageChanged: (index) {
+                setState(() {
+                  currentIndex = index;
+                });
+              },
+              itemBuilder: (context, index) {
+                return OnboardingViewBody(
+                  screen: OnboardingModel.onboardingView[index],
+                  pageController: pageController,
+                  currentIndex: index,
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

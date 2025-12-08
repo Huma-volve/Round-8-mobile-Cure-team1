@@ -1,29 +1,63 @@
-import 'package:cure_team_1/core/utils/app_images.dart';
+import 'package:cure_team_1/core/theme/app_colors.dart';
+import 'package:cure_team_1/core/theme/app_text_styles.dart';
+import 'package:cure_team_1/core/widgets/custome_button.dart';
+import 'package:cure_team_1/features/onboarding/data/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:cure_team_1/features/onboarding/presentation/pages/widgets/dots_indicator.dart';
 
 class OnboardingViewBody extends StatelessWidget {
-  const OnboardingViewBody({super.key});
+  const OnboardingViewBody(
+      {super.key,
+      required this.screen,
+      required this.pageController,
+      required this.currentIndex});
+  final OnboardingModel screen;
+  final PageController pageController;
+  final int currentIndex;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: 37.h,
-        ),
-        Center(
-          child: Image.asset(
-            AppImages.onBoarding1,
-            width: 340.w,
-            height: 320.h,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Column(
+        children: [
+          const Spacer(flex: 1),
+          Center(
+            child: Image.asset(
+              screen.image,
+            ),
           ),
-        ),
-        SizedBox(
-          height: 74.h,
-        ),
-        const Text('Book Your Appointment Easily')
-      ],
+          const Spacer(flex: 1),
+          Text(
+            screen.title,
+            style: AppTextStyles.styleRegular24,
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 8.h,
+          ),
+          Text(
+            screen.desc,
+            style: AppTextStyles.styleMedium16,
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          OnboardingDots(currentIndex: currentIndex),
+          const Spacer(
+            flex: 3,
+          ),
+          CustomeButton(
+              text: currentIndex == 1 ? 'Get Started' : 'Next',
+              color: AppColors.primaryColor,
+              onTap: () {}),
+          SizedBox(
+            height: 20.h,
+          )
+        ],
+      ),
     );
   }
 }

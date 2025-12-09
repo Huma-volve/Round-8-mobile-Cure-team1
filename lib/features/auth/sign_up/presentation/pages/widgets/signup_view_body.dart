@@ -75,7 +75,11 @@ class SignupViewBody extends StatelessWidget {
             height: 72.h,
           ),
           CustomeButton(
-              text: 'Sign up', color: AppColors.primaryColor, onTap: () {}),
+              text: 'Sign up',
+              color: AppColors.primaryColor,
+              onTap: () {
+                GoRouter.of(context).push(AppRoute.otpPage);
+              }),
           SizedBox(
             height: 24.h,
           ),

@@ -1,3 +1,4 @@
+import 'package:cure_team_1/features/auth/otp/presentation/pages/widgets/otp_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OtpPage extends StatelessWidget {
@@ -5,6 +6,8 @@ class OtpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: OtpViewBody(),
+    );
   }
 }

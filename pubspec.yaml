@@ -58,6 +58,10 @@ fonts:
     fonts:
       - asset: assets/fonts/georgia.ttf
         weight: 400
+  - family: PlusJakartaSans
+    fonts:
+      - asset: assets/fonts/PlusJakartaSans-Regular.ttf
+        weight: 400
 
 flutter_assets:
   assets_path: assets/images/

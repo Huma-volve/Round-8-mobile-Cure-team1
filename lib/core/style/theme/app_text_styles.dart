@@ -54,12 +54,17 @@ class AppTextStyles {
       fontWeight: FontWeight.w400,
       fontFamily: 'georgia',
       color: ColorsLight.blueGray);
+          static TextStyle georgiaRegular16= TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      fontFamily: 'georgia',
+      color: ColorsLight.prussianBlue);
 
        static TextStyle georgiaSemiBold14 = TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w600,
       fontFamily: 'georgia',
-      color: ColorsLight.Gray);
+      color: ColorsLight.gray);
 
        static TextStyle montserratRegular14 = TextStyle(
       fontSize: 14.sp,
@@ -86,5 +91,11 @@ class AppTextStyles {
     fontSize: 32.sp,
     fontWeight: FontWeight.w400,
     fontFamily: 'georgia',
+  );
+  static TextStyle plusJakartaSansbold16 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'PlusJakartaSans',
+    color: ColorsLight.vividYellow
   );
 }

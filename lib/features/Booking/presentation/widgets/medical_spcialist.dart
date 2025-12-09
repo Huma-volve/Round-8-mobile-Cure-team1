@@ -1,5 +1,5 @@
-import 'package:cure_team_1/core/theme/app_colors.dart';
-import 'package:cure_team_1/core/theme/app_text_styles.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,24 +11,26 @@ class MedicalSpecialty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width=MediaQuery.sizeOf(context).width;
+    double width = MediaQuery.sizeOf(context).width;
     return SizedBox(
-      width: width-174.w,
+      width: width - 174.w,
       child: Row(
-       mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-       
-          Text('Pulmonologist',style: AppTextStyles.styleRegular14,),
-      const   Spacer(),
-            Container(
-           height: 40.h,
-           width: 40.w,
-           decoration: BoxDecoration(
-             image: const DecorationImage(image: AssetImage(AppImages.favorite)),
-             border: Border.all(width: 2,color: AppColors.offWhite),
-             borderRadius: BorderRadius.circular(40)
-           ),
-         ),
+          Text(
+            'Pulmonologist',
+            style: AppTextStyles.styleRegular14,
+          ),
+          const Spacer(),
+          Container(
+            height: 40.h,
+            width: 40.w,
+            decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: AssetImage(AppImages.favorite)),
+                border: Border.all(width: 2, color: ColorsLight.offWhite),
+                borderRadius: BorderRadius.circular(40)),
+          ),
         ],
       ),
     );

@@ -1,4 +1,4 @@
-import 'package:cure_team_1/core/theme/app_colors.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,12 +31,12 @@ class AppTextStyles {
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       fontFamily: 'Montserrat',
-      color: AppColors.blueGray);
+      color: ColorsLight.blueGray);
   static TextStyle styleRegular12 = TextStyle(
       fontSize: 12.sp,
       fontWeight: FontWeight.w400,
       fontFamily: 'Montserrat',
-      color: AppColors.blueGray);
+      color: ColorsLight.blueGray);
   static TextStyle styleMedium16White = TextStyle(
       fontSize: 16.sp,
       fontWeight: FontWeight.w500,

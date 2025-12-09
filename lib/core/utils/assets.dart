@@ -2,9 +2,17 @@
 class Assets {
   Assets._();
   
+  static const String resourceImagesArrowImage = "assets/images/arrow_image.png";
+
   static const String resourceImagesCamera = "assets/images/Camera.svg";
 
+  static const String resourceImagesCheckedImage = "assets/images/checked_image.png";
+
   static const String resourceImagesDot = "assets/images/dot.svg";
+
+  static const String resourceImagesExperiance = "assets/images/experiance.png";
+
+  static const String resourceImagesFavorite = "assets/images/favorite.png";
 
   static const String resourceImagesIconGoogle = "assets/images/icon_google.png";
 
@@ -14,7 +22,13 @@ class Assets {
 
   static const String resourceImagesJessica = "assets/images/jessica.png";
 
+  static const String resourceImagesLocation = "assets/images/location.png";
+
   static const String resourceImagesLogin = "assets/images/login.png";
+
+  static const String resourceImagesMedal = "assets/images/medal.png";
+
+  static const String resourceImagesMessage = "assets/images/message.png";
 
   static const String resourceImagesMic = "assets/images/mic.svg";
 
@@ -26,11 +40,17 @@ class Assets {
 
   static const String resourceImagesPin = "assets/images/Pin.svg";
 
+  static const String resourceImagesProfile2user = "assets/images/profile-2user.png";
+
+  static const String resourceImagesReviews = "assets/images/reviews.png";
+
   static const String resourceImagesRobert = "assets/images/robert.png";
 
   static const String resourceImagesSolarCheckCircle = "assets/images/solar_check_circle.png";
 
   static const String resourceImagesSplashDot = "assets/images/splash_dot.png";
+
+  static const String resourceImagesStar = "assets/images/star.png";
 
   static const String resourceImagesTime = "assets/images/time.png";
 

@@ -1,8 +1,8 @@
 class AppRoute {
-  static const splash = "/";
+  static const splash = "/bookPage";
   static const loginPage = "/loginPage";
   static const signupPage = "/signupPage";
   static const otpPage = "/otpPage";
 
-  static const bookPage = "/bookPage";
+  static const bookPage = "/";
 }

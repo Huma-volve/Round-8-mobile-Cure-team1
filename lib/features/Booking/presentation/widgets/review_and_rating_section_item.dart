@@ -1,7 +1,7 @@
 
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/features/Booking/data/models/review_and_rating_section_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cure_team_1/core/theme/app_text_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReviewAndRatingSectionItem extends StatelessWidget {
@@ -27,8 +27,8 @@ class ReviewAndRatingSectionItem extends StatelessWidget {
             )
         ,
         SizedBox(height: 14.h,),
-        Text(reviewAndRatingSectionModel.data.toString(),style: AppTextStyles.styleSemiBold14,),
-         Text(reviewAndRatingSectionModel.title,style: AppTextStyles.styleRegular14,),
+        Text(reviewAndRatingSectionModel.data.toString(),style: AppTextStyles.georgiaSemiBold14,),
+         Text(reviewAndRatingSectionModel.title,style: AppTextStyles.montserratRegular14,),
           ],
         )
       ],

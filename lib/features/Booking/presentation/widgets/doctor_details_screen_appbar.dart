@@ -1,5 +1,5 @@
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
-import 'package:cure_team_1/core/utils/app_images.dart';
+import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,7 +16,7 @@ class DoctorDetailsScreenAppBar extends StatelessWidget {
           height: 24.h,
           width: 24.w,
           decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage(AppImages.arrow))),
+              image: DecorationImage(image: AssetImage(Assets.resourceImagesArrowImage))),
         ),
         const Spacer(),
         Text(
@@ -24,7 +24,7 @@ class DoctorDetailsScreenAppBar extends StatelessWidget {
           style: AppTextStyles.styleRegular24,
         ),
         const Spacer(),
-        Image.asset(AppImages.message),
+        Image.asset(Assets.resourceImagesMessage),
       ],
     );
   }

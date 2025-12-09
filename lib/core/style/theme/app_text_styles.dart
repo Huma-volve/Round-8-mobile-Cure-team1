@@ -32,6 +32,24 @@ class AppTextStyles {
       fontWeight: FontWeight.w400,
       fontFamily: 'Montserrat',
       color: ColorsLight.blueGray);
+      static TextStyle georgiaRegular14 = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      fontFamily: 'georgia',
+      color: ColorsLight.blueGray);
+
+       static TextStyle georgiaSemiBold14 = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w600,
+      fontFamily: 'georgia',
+      color: ColorsLight.Gray);
+
+       static TextStyle montserratRegular14 = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      fontFamily: 'Montserrat',
+      color: ColorsLight.blueGray);
+
   static TextStyle styleRegular12 = TextStyle(
       fontSize: 12.sp,
       fontWeight: FontWeight.w400,

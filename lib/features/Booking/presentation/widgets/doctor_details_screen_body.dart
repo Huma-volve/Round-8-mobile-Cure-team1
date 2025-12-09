@@ -1,5 +1,5 @@
 
-
+import 'package:cure_team_1/features/Booking/presentation/widgets/about_me_section.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/doctor_details_screen_appbar.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/doctor_details_widget.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/review_and_rating_section.dart';
@@ -11,17 +11,22 @@ class DoctorDetailsScreenBody extends StatelessWidget {
     super.key,
   });
 
+
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 16.w),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 50.h,),
           const DoctorDetailsScreenAppBar(),
           const DoctorDetailsWidget(),
          SizedBox(height: 16.h,),
-         const ReviewAndRatingSection()
+         const ReviewAndRatingSection(),
+         SizedBox(height: 41.h,),
+         const AboutMeSection()
         ],
       ),
     );

@@ -12,7 +12,6 @@ class ReviewAndRatingSection extends StatelessWidget {
   const ReviewAndRatingSection({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return  Row(
@@ -34,9 +33,6 @@ class ReviewAndRatingSection extends StatelessWidget {
         SizedBox(
             width: 56.w,
           child: ReviewAndRatingSectionItem(reviewAndRatingSectionModel: ReviewAndRatingSectionModel(image: AppImages.reviews, data: 1.872, title: 'reviews'),)),
-    
-    
-       
       ],
     );
   }

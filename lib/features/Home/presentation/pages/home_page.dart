@@ -1,7 +1,10 @@
 import 'package:cure_team_1/features/Home/presentation/widgets/booking_section.dart';
+import 'package:cure_team_1/features/Home/presentation/widgets/doctor_item.dart';
 import 'package:cure_team_1/features/Home/presentation/widgets/home_top_section.dart';
+import 'package:cure_team_1/features/Home/presentation/widgets/specialties_list.dart';
 import 'package:flutter/material.dart';
 
+import '../../Data/models/doctor_model.dart';
 import '../../Data/models/specialty_model.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,61 +42,59 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 children:[
-                  Expanded(
+                  const Expanded(
                     child: Text("Specialties",
                       style: TextStyle(
                     fontSize: 20
                       ),),
                   ),
-                TextButton(onPressed: (){}, child: Text("Veiw all",
+                TextButton(onPressed: (){}, child: const Text("View all",
                   style: TextStyle(
                     fontSize: 18,
                   color: Colors.blue
                 ),)),
-
                 ]
               ),
               const SizedBox(
                 height: 6,
               ),
-              SizedBox(
-                height: 55,
-                child: ListView.separated(
-                    padding: const EdgeInsets.all(8),
-
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder:(context,index){
-                      final spec = Specialty.specialties[index];
-
-                      return Container(
-
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 10,
-                        ),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.grey.withOpacity(0.25),
-                            width: 0.8,
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child:  Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                               Icon(spec.icon, size: 16),
-                              const SizedBox(width: 4),
-                              Text(spec.name),
-                            ],
-                      ),);},
-                    separatorBuilder:  (context, index) => const SizedBox(width: 10),
-                    itemCount: Specialty.specialties.length),
-              ),
-              SizedBox(
+              const SpecialtiesList(),
+              const SizedBox(
                 height: 10,
               ),
-              BookingSection()
+              const BookingSection(),
+              Row(
+                  children:[
+                    Expanded(
+                      child: Text("Doctors near you",
+                        style: TextStyle(
+                            fontSize: 20
+                        ),),
+                    ),
+                    TextButton(onPressed: (){}, child: Text("Veiw all",
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.blue
+                      ),)),
+                  ]
+              ),
+              Expanded(
+                child:  ListView.separated(
+                    scrollDirection: Axis.vertical,
+                      padding: const EdgeInsets.all(8),
+
+                      itemBuilder:(context,index){
+                        final item = doctorsList[index];
+                        return DoctorItem(doctor: item);
+                      },
+                    separatorBuilder: (BuildContext context, int index) {
+                    return const SizedBox(
+                      height: 8,
+                    );
+                    },
+                    itemCount: doctorsList.length,
+                  ),
+              )
             ],
           ),
         ),

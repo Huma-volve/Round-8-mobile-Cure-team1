@@ -9,7 +9,7 @@ class DocApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(
-          360, 690), // You can adjust this based on your design specs
+          375, 812), // You can adjust this based on your design specs
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {

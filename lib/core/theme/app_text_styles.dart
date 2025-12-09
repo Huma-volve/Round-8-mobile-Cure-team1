@@ -47,4 +47,9 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     fontFamily: 'georgia',
   );
+  static TextStyle stylegeorgia32 = TextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'georgia',
+  );
 }

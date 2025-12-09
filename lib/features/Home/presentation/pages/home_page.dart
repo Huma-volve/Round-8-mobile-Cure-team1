@@ -1,8 +1,17 @@
+import 'package:cure_team_1/features/Home/presentation/widgets/booking_section.dart';
+import 'package:cure_team_1/features/Home/presentation/widgets/home_top_section.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+import '../../Data/models/specialty_model.dart';
+
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,65 +22,11 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  const CircleAvatar(
-                    radius: 18,
-                    child: Icon(Icons.person),
-                  ),
-                  const SizedBox(width: 12),
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Welcome back, Rahma", style: TextStyle(fontWeight: FontWeight.bold)),
-                        SizedBox(height: 8),
-                        Row(
-                          children: [
-                            Icon(Icons.location_on_outlined, size: 16),
-                            SizedBox(width: 4),
-                            Text("129, El-Nasr Street, Cairo"),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(17),
-                      boxShadow: const [
-                        BoxShadow(color: Colors.black26, offset: Offset(0, 6), blurRadius: 6),
-                      ],
-                    ),
-                    child: InkWell(onTap: (){
-
-                    },
-                        child: const Icon(Icons.favorite_border,)),
-                  ),
-                  const SizedBox(
-                    width: 4,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(17),
-                      boxShadow: const [
-                        BoxShadow(color: Colors.black26, offset: Offset(0, 6), blurRadius: 6),
-                      ],
-                    ),
-                    child: InkWell(onTap: (){},
-                        child: const Icon(Icons.notifications_none_outlined,)),
-                  ),
-                ],
-              ),
-              SizedBox(
+           const HomeTopSection(),
+              const SizedBox(
                 height: 23,
               ),
               TextFormField(
-
                 decoration: InputDecoration(
                   hintText: "Search for specialty, doctor..",
                   border: OutlineInputBorder(
@@ -79,7 +34,7 @@ class HomePage extends StatelessWidget {
                   )
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -94,8 +49,51 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                   color: Colors.blue
-                ),))]
+                ),)),
+
+                ]
               ),
+              const SizedBox(
+                height: 6,
+              ),
+              SizedBox(
+                height: 55,
+                child: ListView.separated(
+                    padding: const EdgeInsets.all(8),
+
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder:(context,index){
+                      final spec = Specialty.specialties[index];
+
+                      return Container(
+
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 10,
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.grey.withOpacity(0.25),
+                            width: 0.8,
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child:  Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                               Icon(spec.icon, size: 16),
+                              const SizedBox(width: 4),
+                              Text(spec.name),
+                            ],
+                      ),);},
+                    separatorBuilder:  (context, index) => const SizedBox(width: 10),
+                    itemCount: Specialty.specialties.length),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              BookingSection()
             ],
           ),
         ),

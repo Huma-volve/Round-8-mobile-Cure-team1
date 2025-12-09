@@ -1,11 +1,13 @@
+import 'package:cure_team_1/core/common/widgets/button_with_google.dart';
+import 'package:cure_team_1/core/common/widgets/custome_button.dart';
+import 'package:cure_team_1/core/common/widgets/custome_text_field.dart';
+import 'package:cure_team_1/core/common/widgets/phone_input.dart';
 import 'package:cure_team_1/core/constants/app_route.dart';
-import 'package:cure_team_1/core/theme/app_colors.dart';
-import 'package:cure_team_1/core/theme/app_text_styles.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
+
 import 'package:cure_team_1/core/utils/app_images.dart';
-import 'package:cure_team_1/core/widgets/button_with_google.dart';
-import 'package:cure_team_1/core/widgets/custome_button.dart';
-import 'package:cure_team_1/core/widgets/custome_text_field.dart';
-import 'package:cure_team_1/core/widgets/phone_input.dart';
+
 import 'package:cure_team_1/features/auth/login/presentation/pages/widgets/divider_login.dart';
 import 'package:cure_team_1/features/auth/sign_up/presentation/pages/widgets/remember_me.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +31,7 @@ class SignupViewBody extends StatelessWidget {
           Center(
             child: Image.asset(
               AppImages.logoSplash,
-              color: AppColors.primaryColor,
+              color: ColorsLight.primaryColor,
             ),
           ),
           SizedBox(
@@ -75,7 +77,7 @@ class SignupViewBody extends StatelessWidget {
             height: 72.h,
           ),
           CustomeButton(
-              text: 'Sign up', color: AppColors.primaryColor, onTap: () {}),
+              text: 'Sign up', color: ColorsLight.primaryColor, onTap: () {}),
           SizedBox(
             height: 24.h,
           ),
@@ -101,7 +103,7 @@ class SignupViewBody extends StatelessWidget {
                 child: Text(
                   'Sign in',
                   style: AppTextStyles.styleRegular12
-                      .copyWith(color: AppColors.primaryColor),
+                      .copyWith(color: ColorsLight.primaryColor),
                 ),
               )
             ],

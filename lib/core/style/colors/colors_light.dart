@@ -10,4 +10,5 @@ class ColorsLight {
   static const Color textFieldColoe = Color(0xffF5F6F7);
   static const Color borderButton = Color(0xffBBC1C7);
   static const Color royalBlue=Color(0xff145DB8);
+  static const Color prussianBlue=Color(0xff05162C);
 }

@@ -2,6 +2,8 @@
 class Assets {
   Assets._();
   
+  static const String resourceImagesAddReview = "assets/images/add_review.png";
+
   static const String resourceImagesArrowImage = "assets/images/arrow_image.png";
 
   static const String resourceImagesCamera = "assets/images/Camera.svg";
@@ -51,6 +53,10 @@ class Assets {
   static const String resourceImagesSplashDot = "assets/images/splash_dot.png";
 
   static const String resourceImagesStar = "assets/images/star.png";
+
+  static const String resourceImagesStarEmpty = "assets/images/star_empty.png";
+
+  static const String resourceImagesStarFull = "assets/images/star_full.png";
 
   static const String resourceImagesTime = "assets/images/time.png";
 

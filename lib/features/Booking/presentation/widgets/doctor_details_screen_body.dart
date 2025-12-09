@@ -1,5 +1,6 @@
 
 import 'package:cure_team_1/features/Booking/presentation/widgets/about_me_section.dart';
+import 'package:cure_team_1/features/Booking/presentation/widgets/add_review_and_rating.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/doctor_details_screen_appbar.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/doctor_details_widget.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/review_and_rating_section.dart';
@@ -26,7 +27,9 @@ class DoctorDetailsScreenBody extends StatelessWidget {
          SizedBox(height: 16.h,),
          const ReviewAndRatingSection(),
          SizedBox(height: 41.h,),
-         const AboutMeSection()
+         const AboutMeSection(),
+          SizedBox(height: 24.h,),
+         const AddReviewAndRating()
         ],
       ),
     );

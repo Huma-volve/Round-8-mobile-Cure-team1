@@ -22,10 +22,27 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     fontFamily: 'Montserrat',
   );
+   static TextStyle montserratMedum16 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+    color: ColorsLight.blueGray
+  );
   static TextStyle styleRegular20 = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
     fontFamily: 'Montserrat',
+  );
+  static TextStyle georgiaRegular20 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'georgia',
+  );
+  static TextStyle georgiaRegular40 = TextStyle(
+    fontSize: 40.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'georgia',
+    color: ColorsLight.prussianBlue
   );
   static TextStyle styleRegular14 = TextStyle(
       fontSize: 14.sp,

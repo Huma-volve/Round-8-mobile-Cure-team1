@@ -10,6 +10,8 @@ class Assets {
 
   static const String resourceImagesCheckedImage = "assets/images/checked_image.png";
 
+  static const String resourceImagesDoctor = "assets/images/doctor.png";
+
   static const String resourceImagesDot = "assets/images/dot.svg";
 
   static const String resourceImagesExperiance = "assets/images/experiance.png";
@@ -63,6 +65,8 @@ class Assets {
   static const String resourceImagesTrashBinTrash = "assets/images/Trash_Bin_Trash.svg";
 
   static const String resourceImagesTurner = "assets/images/turner.png";
+
+  static const String resourceImagesUserComment = "assets/images/user_comment.png";
 
   static const String resourceImagesVolumeCross = "assets/images/Volume_Cross.svg";
 

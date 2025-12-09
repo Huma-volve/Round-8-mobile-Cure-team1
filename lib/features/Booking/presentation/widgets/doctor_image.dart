@@ -19,9 +19,9 @@ class DoctorImage extends StatelessWidget {
           height: 113.h,
           width: 113.w,
           decoration: BoxDecoration(
-            
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(60)
+         
+            borderRadius: BorderRadius.circular(60),
+            image: const DecorationImage(image: AssetImage(Assets.resourceImagesDoctor))
           ),
         ),
         Positioned(

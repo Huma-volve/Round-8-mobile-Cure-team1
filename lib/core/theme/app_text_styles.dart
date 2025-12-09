@@ -33,4 +33,10 @@ class AppTextStyles {
       fontFamily: 'Montserrat',
       color: AppColors.blueGray
       );
+       static TextStyle styleSemiBold14 = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w600,
+      fontFamily: 'Montserrat',
+      color: AppColors.blue
+      );
 }

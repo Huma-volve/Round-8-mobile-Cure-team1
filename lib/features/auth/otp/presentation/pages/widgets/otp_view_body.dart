@@ -1,0 +1,37 @@
+import 'package:cure_team_1/core/common/widgets/custome_appbar.dart';
+import 'package:cure_team_1/core/common/widgets/custome_button.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
+
+import 'package:cure_team_1/features/auth/otp/presentation/pages/widgets/otp_item.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class OtpViewBody extends StatelessWidget {
+  const OtpViewBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 32.h),
+      child: Column(
+        children: [
+          const CustomeAppbar(title: 'OTP Code Verification'),
+          SizedBox(
+            height: 70.h,
+          ),
+          Text(
+            'Code has been send to +02 010 *** **88',
+            style: AppTextStyles.styleMedium16,
+          ),
+          OtpItem(),
+          SizedBox(
+            height: 96.h,
+          ),
+          CustomeButton(
+              text: 'Verify', color: ColorsLight.primaryColor, onTap: () {})
+        ],
+      ),
+    );
+  }
+}

@@ -11,11 +11,27 @@ class Chat extends StatefulWidget {
 class _ChatState extends State<Chat> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
-          children: [Customabppar()],
+          children: [
+            const Customabppar(),
+            Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: const Color.fromRGBO(245, 246, 247, 1),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                    ),
+                    style: const TextStyle(),
+                  ),
+                ))
+          ],
         ),
       ),
     );

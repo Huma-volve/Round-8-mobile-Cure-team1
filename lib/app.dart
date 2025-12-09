@@ -1,5 +1,5 @@
 import 'package:cure_team_1/features/chat/persention/screens/chat.dart';
-import 'package:cure_team_1/features/splash/splash_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

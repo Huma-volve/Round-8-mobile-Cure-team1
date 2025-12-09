@@ -3,11 +3,12 @@ import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DoctorDetailsScreenAppBar extends StatelessWidget {
-  const DoctorDetailsScreenAppBar({
-    super.key,
+class BookingAppBar extends StatelessWidget {
+  const BookingAppBar({
+    super.key, required this.title,  this.ismessageIconEnable=false,
   });
-
+final String title;
+final bool ismessageIconEnable;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,11 +21,13 @@ class DoctorDetailsScreenAppBar extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-          'Doctor Details',
+         title,
           style: AppTextStyles.styleRegular24,
         ),
         const Spacer(),
-        Image.asset(Assets.resourceImagesMessage),
+        Visibility(
+          visible: ismessageIconEnable,
+          child: Image.asset(Assets.resourceImagesMessage)),
       ],
     );
   }

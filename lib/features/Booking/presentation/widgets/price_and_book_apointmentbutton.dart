@@ -1,8 +1,10 @@
 
+import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/custom_elevated_button.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/price_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class PriceAndBookApointmentButton extends StatelessWidget {
   const PriceAndBookApointmentButton({
@@ -26,7 +28,7 @@ class PriceAndBookApointmentButton extends StatelessWidget {
            children: [
          const    PriceWidget(),
          SizedBox(height: 15.h,),
-             const CustomElevatedButton()      
+              CustomElevatedButton(title: 'Book Appointment',onPressed: () => context.go(AppRoute.bookappointment),)      
            ],
           ),
         ),

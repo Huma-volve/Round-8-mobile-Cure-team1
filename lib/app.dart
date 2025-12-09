@@ -1,4 +1,5 @@
 import 'package:cure_team_1/core/constants/go_route.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,6 +12,7 @@ class DocApp extends StatelessWidget {
       designSize: const Size(
           375, 812), // You can adjust this based on your design specs
       minTextAdapt: true,
+
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp.router(

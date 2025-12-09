@@ -1,3 +1,4 @@
+import 'package:cure_team_1/features/auth/login/presentation/pages/widgets/login_view_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -5,6 +6,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: LoginViewBody(),
+    );
   }
 }

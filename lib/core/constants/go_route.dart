@@ -1,6 +1,7 @@
 import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/doctor_details_screen.dart';
 import 'package:cure_team_1/features/auth/login/presentation/pages/login_page.dart';
+import 'package:cure_team_1/features/auth/sign_up/presentation/pages/sign_up_page.dart';
 import 'package:cure_team_1/features/splash/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,6 +19,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: AppRoute.loginPage,
       builder: (context, state) => const LoginPage(),
+    ),
+    GoRoute(
+      path: AppRoute.signupPage,
+      builder: (context, state) => const SignUpPage(),
     ),
   ],
 );

@@ -1,5 +1,5 @@
 import 'package:cure_team_1/core/constants/app_route.dart';
-import 'package:cure_team_1/core/theme/app_text_styles.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/features/onboarding/data/onboarding_model.dart';
 import 'package:cure_team_1/features/onboarding/presentation/pages/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';

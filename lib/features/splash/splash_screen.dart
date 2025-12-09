@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:cure_team_1/core/theme/app_colors.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryColor,
+      backgroundColor: ColorsLight.primaryColor,
       body: Stack(
         alignment: Alignment.center,
         children: [

@@ -1,4 +1,4 @@
-import 'package:cure_team_1/core/theme/app_colors.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
@@ -28,7 +28,7 @@ class PhoneInputExample extends StatelessWidget {
         hintText: 'Enter your number',
         border: InputBorder.none,
         filled: true,
-        fillColor: AppColors.textFieldColoe,
+        fillColor: ColorsLight.textFieldColoe,
         contentPadding: EdgeInsets.symmetric(
           vertical: 20,
           horizontal: 16,

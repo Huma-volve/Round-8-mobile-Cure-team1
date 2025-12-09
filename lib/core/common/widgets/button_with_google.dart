@@ -1,5 +1,5 @@
-import 'package:cure_team_1/core/theme/app_colors.dart';
-import 'package:cure_team_1/core/theme/app_text_styles.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,7 +17,7 @@ class ButtonWithGoogle extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.transparent,
           border: Border.all(
-            color: AppColors.borderButton,
+            color: ColorsLight.borderButton,
             width: 2,
           ),
           borderRadius: BorderRadius.circular(12),

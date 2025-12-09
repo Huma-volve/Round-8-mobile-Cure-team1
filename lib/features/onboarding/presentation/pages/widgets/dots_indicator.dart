@@ -1,4 +1,4 @@
-import 'package:cure_team_1/core/theme/app_colors.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/features/onboarding/data/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,8 +21,8 @@ class OnboardingDots extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
             color: currentIndex == index
-                ? AppColors.primaryColor
-                : AppColors.primaryColor.withOpacity(0.3),
+                ? ColorsLight.primaryColor
+                : ColorsLight.primaryColor.withOpacity(0.3),
           ),
         ),
       ),

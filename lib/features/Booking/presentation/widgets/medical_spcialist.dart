@@ -25,7 +25,7 @@ class MedicalSpecialty extends StatelessWidget {
            width: 40.w,
            decoration: BoxDecoration(
              image: const DecorationImage(image: AssetImage(AppImages.favorite)),
-             border: Border.all(width: 2,color: AppColors.offWhite),
+             border: Border.all(width: 3,color: AppColors.offWhite),
              borderRadius: BorderRadius.circular(40)
            ),
          ),

@@ -1,6 +1,8 @@
 
+
 import 'package:cure_team_1/features/Booking/presentation/widgets/doctor_details_screen_appbar.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/doctor_details_widget.dart';
+import 'package:cure_team_1/features/Booking/presentation/widgets/review_and_rating_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,8 +19,9 @@ class DoctorDetailsScreenBody extends StatelessWidget {
         children: [
           SizedBox(height: 50.h,),
           const DoctorDetailsScreenAppBar(),
-          const DoctorDetailsWidget()
-         
+          const DoctorDetailsWidget(),
+         SizedBox(height: 16.h,),
+         const ReviewAndRatingSection()
         ],
       ),
     );

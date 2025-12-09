@@ -29,7 +29,7 @@ class LoginViewBody extends StatelessWidget {
             children: [
               Text(
                 'Enter your phone number',
-                style: AppTextStyles.stylegeorgia24,
+                style: AppTextStyles.stylegeorgia20,
               ),
             ],
           ),

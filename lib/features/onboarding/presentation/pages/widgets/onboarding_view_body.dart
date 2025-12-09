@@ -33,7 +33,7 @@ class OnboardingViewBody extends StatelessWidget {
           const Spacer(flex: 1),
           Text(
             screen.title,
-            style: AppTextStyles.stylegeorgia24,
+            style: AppTextStyles.stylegeorgia20,
             textAlign: TextAlign.center,
           ),
           SizedBox(

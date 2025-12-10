@@ -16,9 +16,9 @@ class RatingLogic extends StatelessWidget {
       children: List.generate(5, (index){
         if(index+1<rate)
         {
-        return Image.asset(Assets.resourceImagesStarFull);
+        return Image.asset(Assets.resourceImagesActiveStar);
         }
-       return Image.asset(Assets.resourceImagesStarEmpty);
+       return Image.asset(Assets.resourceImagesInActiveStar);
       }),
     );
   }

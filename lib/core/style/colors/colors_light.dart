@@ -20,5 +20,6 @@ class ColorsLight {
  static const Color darkGrey = Color(0xff404448);
  static const Color green = Color(0xff4CAF50);
  static const Color lightGreen = Color(0xFFEDF7EE);
+  static const Color coolGrey = Color(0xFF99A2AB);
 
 }

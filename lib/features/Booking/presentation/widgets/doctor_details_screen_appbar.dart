@@ -1,4 +1,5 @@
 
+import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ final bool ismessageIconEnable;
       children: [
         GestureDetector(
           onTap: () {
-          GoRouter.of(context).pop();
+          context.go(AppRoute.doctorDetails);
           },
           child: Container(
             height: 24.h,

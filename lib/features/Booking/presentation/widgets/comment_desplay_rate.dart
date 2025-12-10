@@ -25,7 +25,7 @@ class CommentDisplayRate extends StatelessWidget {
         padding:  EdgeInsets.symmetric(horizontal: 14.w,vertical: 12.h),
         child: Row(
          children: [
-         Image.asset(Assets.resourceImagesStarFull),
+         Image.asset(Assets.resourceImagesActiveStar),
          Text('4.5',style: AppTextStyles.plusJakartaSansbold16)
         ],),
       ),

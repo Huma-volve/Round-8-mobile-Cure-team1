@@ -4,6 +4,8 @@ class Assets {
   
   static const String resourceImagesActiveCheckedIcon = "assets/images/active_checked_icon.png";
 
+  static const String resourceImagesActiveStar = "assets/images/active_star.png";
+
   static const String resourceImagesAddReview = "assets/images/add_review.png";
 
   static const String resourceImagesAltArrowDown = "assets/images/Alt_Arrow_Down.png";
@@ -33,6 +35,8 @@ class Assets {
   static const String resourceImagesIconGoogle = "assets/images/icon_google.png";
 
   static const String resourceImagesIconSplash = "assets/images/icon_splash.png";
+
+  static const String resourceImagesInActiveStar = "assets/images/in_active_star.png";
 
   static const String resourceImagesJana = "assets/images/jana.png";
 
@@ -69,10 +73,6 @@ class Assets {
   static const String resourceImagesSplashDot = "assets/images/splash_dot.png";
 
   static const String resourceImagesStar = "assets/images/star.png";
-
-  static const String resourceImagesStarEmpty = "assets/images/star_empty.png";
-
-  static const String resourceImagesStarFull = "assets/images/star_full.png";
 
   static const String resourceImagesTime = "assets/images/time.png";
 

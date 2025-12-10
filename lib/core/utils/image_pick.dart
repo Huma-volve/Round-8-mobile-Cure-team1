@@ -1,5 +1,7 @@
 import 'package:cure_team_1/core/di/injection_container%20copy.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 
 class PickImageUtils {

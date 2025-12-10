@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../pages/favorite_page.dart';
 class HomeTopSection extends StatelessWidget {
   const HomeTopSection({super.key});
@@ -22,7 +21,7 @@ class HomeTopSection extends StatelessWidget {
                 children: [
                   const Icon(Icons.location_on_outlined, size: 16),
                   TextButton(onPressed: (){
-                    openMap();
+
                   }, child: const Text("129, El-Nasr Street, Cairo")),
                 ],
               ),
@@ -62,18 +61,4 @@ class HomeTopSection extends StatelessWidget {
     );
   }
 }
-Future<void> openMap() async {
-  final Uri url = Uri.parse(
-      "https://www.google.com/maps/search/?api=1&query=30.0444,31.2357"
-  );
 
-  if (!await canLaunchUrl(url)) {
-    print("❌ Can't open map");
-    return;
-  }
-
-  await launchUrl(
-    url,
-    mode: LaunchMode.externalApplication,
-  );
-}

@@ -80,6 +80,10 @@ fonts:
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils
+  assets:
+    - assets/images/home/
+    - assets/images/chat/
+    - assets/images/profile/
   filename: assets.dart
   field_prefix: resource
   ignore_comments: true

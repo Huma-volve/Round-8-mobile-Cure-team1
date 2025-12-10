@@ -31,11 +31,11 @@ class ReviewAndRatingSectionItem extends StatelessWidget {
               ),
               Text(
                 reviewAndRatingSectionModel.data.toString(),
-                style: AppTextStyles.styleRegular14,
+                style: AppTextStyles.styleMedium16,
               ),
               Text(
                 reviewAndRatingSectionModel.title,
-                style: AppTextStyles.styleRegular14,
+                style: AppTextStyles.georgiaH1,
               ),
             ],
           )

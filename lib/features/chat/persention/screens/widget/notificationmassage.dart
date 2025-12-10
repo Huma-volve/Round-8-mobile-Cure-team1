@@ -25,6 +25,6 @@ class Notificationmassage extends StatelessWidget {
     return ListView.builder(
         itemCount: all_list.length,
         itemBuilder: (context, indx) =>
-            InkWell(child: Histroychat(massage: all_list[indx])));
+            InkWell(onTap: () {}, child: Histroychat(massage: all_list[indx])));
   }
 }

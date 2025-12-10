@@ -7,12 +7,15 @@ import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 
 import 'package:cure_team_1/core/utils/app_images.dart';
+import 'package:cure_team_1/core/utils/assets.dart';
 
 import 'package:cure_team_1/features/auth/login/presentation/pages/widgets/divider_login.dart';
 import 'package:cure_team_1/features/auth/sign_up/presentation/pages/widgets/remember_me.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../../core/style/images/app_images.dart';
 
 // ignore: must_be_immutable
 class SignupViewBody extends StatelessWidget {
@@ -30,7 +33,7 @@ class SignupViewBody extends StatelessWidget {
         children: [
           Center(
             child: Image.asset(
-              AppImages.logoSplash,
+              Assets.resourceImagesIconSplash,
               color: ColorsLight.primaryColor,
             ),
           ),

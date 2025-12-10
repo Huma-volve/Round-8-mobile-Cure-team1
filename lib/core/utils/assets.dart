@@ -4,7 +4,15 @@ class Assets {
   
   static const String resourceImagesAddReview = "assets/images/add_review.png";
 
+  static const String resourceImagesAltArrowDown = "assets/images/Alt_Arrow_Down.png";
+
   static const String resourceImagesArrowImage = "assets/images/arrow_image.png";
+
+  static const String resourceImagesArrowLeft = "assets/images/arrow-left.png";
+
+  static const String resourceImagesArrowRight = "assets/images/arrow-right.png";
+
+  static const String resourceImagesCalendar02 = "assets/images/calendar-02.png";
 
   static const String resourceImagesCamera = "assets/images/Camera.svg";
 

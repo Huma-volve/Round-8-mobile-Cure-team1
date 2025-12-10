@@ -32,7 +32,8 @@ class ScrollableContent extends StatelessWidget {
             SizedBox(height: 24.h,),
            const AddReviewAndRating(),
            SizedBox(height: 24.h,),
-           const   CommentDesplay()
+           const   CommentDesplay(),
+           SizedBox(height:300.h),
           ],
         ),
       ],

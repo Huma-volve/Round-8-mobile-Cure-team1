@@ -27,12 +27,12 @@ dependencies:
   intl_phone_number_input: ^0.7.5
   permission_handler: ^11.2.0
   pinput: ^6.0.1
+  scrollable_clean_calendar: ^1.5.0
   shared_preferences: ^2.2.2
   shimmer: ^3.0.0
   smooth_page_indicator: ^1.1.0+2
 
 dev_dependencies:
-  # flutter_launcher_icons: ^0.13.1
   build_runner: ^2.4.9
   flutter_lints: ^3.0.0
   flutter_test:

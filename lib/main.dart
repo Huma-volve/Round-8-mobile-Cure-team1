@@ -12,8 +12,6 @@ void main() async {
   Bloc.observer = AppBlocObserver();
   await SharedPref().instantiatePreferences();
   await setupInjector();
-
-  //عشان لما التلفون يقلب على الجمب البرنامج  ميقلبش معاه
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp],
   );

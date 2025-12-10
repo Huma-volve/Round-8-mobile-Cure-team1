@@ -15,6 +15,8 @@ class ColorsLight {
   static const Color transparentBrightYellow=Color(0xffF9E000);
   static const Color vividYellow=Color(0xffF9E000);
   static const Color red=Color(0xffFC4B4E);
-              
+ static const Color grey1 = Color(0xffF5F6F7);
+ static const Color grey2 = Color(0xffE8EFF8);
+ static const Color darkGrey = Color(0xff404448);
 
 }

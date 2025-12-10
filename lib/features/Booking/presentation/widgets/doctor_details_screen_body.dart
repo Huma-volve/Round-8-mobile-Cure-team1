@@ -16,7 +16,7 @@ class DoctorDetailsScreenBody extends StatelessWidget {
     return const Stack(
         children: [
            ScrollableContent(),
-           PriceAndBookApointmentButton()
+           PriceAndBookActionFooterButton()
         ],
       
     );

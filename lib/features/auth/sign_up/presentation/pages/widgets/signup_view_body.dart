@@ -12,6 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../../core/style/images/app_images.dart';
+
 // ignore: must_be_immutable
 class SignupViewBody extends StatelessWidget {
   SignupViewBody({super.key});

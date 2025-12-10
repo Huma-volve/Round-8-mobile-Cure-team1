@@ -5,8 +5,6 @@ import 'package:cure_team_1/features/Booking/presentation/widgets/review_and_rat
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-
 class ReviewAndRatingSection extends StatelessWidget {
   const ReviewAndRatingSection({
     super.key,
@@ -14,8 +12,7 @@ class ReviewAndRatingSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-    
+    return Row(
       children: [
          SizedBox(
           width: 58.w,

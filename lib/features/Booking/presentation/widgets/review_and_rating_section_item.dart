@@ -6,9 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReviewAndRatingSectionItem extends StatelessWidget {
   const ReviewAndRatingSectionItem({
-    super.key, required this.reviewAndRatingSectionModel,
+    super.key,
+    required this.reviewAndRatingSectionModel,
   });
- final ReviewAndRatingSectionModel  reviewAndRatingSectionModel;
+  final ReviewAndRatingSectionModel reviewAndRatingSectionModel;
 
   @override
   Widget build(BuildContext context) {

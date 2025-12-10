@@ -10,7 +10,7 @@ import 'package:cure_team_1/features/splash/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: AppRoute.doctorDetails,
+  initialLocation: AppRoute.splash,
   routes: [
     GoRoute(
       path: AppRoute.splash,

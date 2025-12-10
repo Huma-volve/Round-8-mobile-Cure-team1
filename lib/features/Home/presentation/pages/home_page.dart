@@ -1,11 +1,11 @@
+import 'package:cure_team_1/features/Home/presentation/pages/search_page.dart';
+import 'package:cure_team_1/features/Home/presentation/pages/veiw_all_specialties.dart';
 import 'package:cure_team_1/features/Home/presentation/widgets/booking_section.dart';
 import 'package:cure_team_1/features/Home/presentation/widgets/doctor_item.dart';
 import 'package:cure_team_1/features/Home/presentation/widgets/home_top_section.dart';
 import 'package:cure_team_1/features/Home/presentation/widgets/specialties_list.dart';
 import 'package:flutter/material.dart';
-
 import '../../Data/models/doctor_model.dart';
-import '../../Data/models/specialty_model.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,6 +30,9 @@ class _HomePageState extends State<HomePage> {
                 height: 23,
               ),
               TextFormField(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+                },
                 decoration: InputDecoration(
                   hintText: "Search for specialty, doctor..",
                   border: OutlineInputBorder(
@@ -48,7 +51,9 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 20
                       ),),
                   ),
-                TextButton(onPressed: (){}, child: const Text("View all",
+                TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ViewAllSpecialties()));
+                }, child: const Text("View all",
                   style: TextStyle(
                     fontSize: 18,
                   color: Colors.blue

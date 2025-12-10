@@ -29,7 +29,7 @@ List<DoctorModel> doctorsList = [
     isFavorite: true,
   ),
   DoctorModel(
-    specialty: "Cardiologist",
+    specialty: "Dentist",
 
     image: 'assets/images/Card (2).png',
     name: 'Dr. Sara Ali',
@@ -39,7 +39,7 @@ List<DoctorModel> doctorsList = [
     isFavorite: false,
   ),
   DoctorModel(
-    specialty: "Cardiologist",
+    specialty: "ENT",
 
     image: 'assets/images/Card (2).png',
     name: 'Dr. Mahmoud Hassan',

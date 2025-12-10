@@ -4,7 +4,8 @@ class AppRoute {
   static const signupPage = "/signupPage";
   static const otpPage = "/otpPage";
 
-  static const bookPage = "/";
+  static const doctorDetails = "/";
     static const bookappointment = "/bookappointment";
-    static const selectPaymentMethodPage = "/selectPaymentMethodPage";
+    static const selectPaymentMethodScreen = "/selectPaymentMethodPage";
+        static const addReviewScreen = "/addreviewScreeb";
 }

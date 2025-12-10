@@ -15,7 +15,7 @@ class SelectPaymentMethodScreenBody extends StatelessWidget {
     return  Stack(
       children: [
        const SelectPaymentMethodScreenScrollableContent(),
-        PriceAndBookActionFooterButton(buttonName: 'Pay',onPressed: () => context.push(AppRoute.bookPage),)
+        PriceAndBookActionFooterButton(buttonName: 'Pay',onPressed: () => context.push(AppRoute.doctorDetails),)
       ],
     );
   }

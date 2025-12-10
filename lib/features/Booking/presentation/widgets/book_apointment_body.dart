@@ -15,7 +15,7 @@ class BookApointmentBody extends StatelessWidget {
     return Stack(
       children: [
         const BookAppointementScrollableContent(),
-        PriceAndBookActionFooterButton(buttonName: 'Continue to Pay',onPressed: ()=>context.push(AppRoute.selectPaymentMethodPage),)
+        PriceAndBookActionFooterButton(buttonName: 'Continue to Pay',onPressed: ()=>context.push(AppRoute.selectPaymentMethodScreen),)
       ],
     );
   }

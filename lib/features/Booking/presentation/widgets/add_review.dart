@@ -22,7 +22,15 @@ class AddReview extends StatelessWidget {
        height: 20.h,
        child: Image.asset(Assets.resourceImagesAddReview)),
        SizedBox(width: 5.w,),
-       Text('add review',style: AppTextStyles.montserratRegular14.copyWith(color: ColorsLight.royalBlue),)
+       TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero
+        ),
+         onPressed: () { 
+
+
+          
+          }, child: Text('add review',style: AppTextStyles.montserratRegular14.copyWith(color: ColorsLight.royalBlue),),)
      ],
     );
   }

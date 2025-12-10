@@ -1,6 +1,7 @@
+
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/features/Booking/data/models/review_and_rating_section_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cure_team_1/core/theme/app_text_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReviewAndRatingSectionItem extends StatelessWidget {
@@ -13,33 +14,26 @@ class ReviewAndRatingSectionItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 98.h,
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Container(
-                height: 30.55.h,
-                width: 30.55.w,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(reviewAndRatingSectionModel.image))),
-              ),
-              SizedBox(
-                height: 14.h,
-              ),
-              Text(
-                reviewAndRatingSectionModel.data.toString(),
-                style: AppTextStyles.styleMedium16,
-              ),
-              Text(
-                reviewAndRatingSectionModel.title,
-                style: AppTextStyles.georgiaH1,
-              ),
-            ],
-          )
-        ],
-      ),
+    height: 98.h,
+    child: Row(
+      children: [
+        Column(
+          children: [
+            Container(
+            height: 30.55.h,
+            width: 30.55.w,
+            decoration:  BoxDecoration(
+     image: DecorationImage(image: AssetImage(reviewAndRatingSectionModel.image))
+            ),
+            )
+        ,
+        SizedBox(height: 14.h,),
+        Text(reviewAndRatingSectionModel.data.toString(),style: AppTextStyles.georgiaSemiBold14,),
+         Text(reviewAndRatingSectionModel.title,style: AppTextStyles.montserratRegular14,),
+          ],
+        )
+      ],
+    ),
     );
   }
 }

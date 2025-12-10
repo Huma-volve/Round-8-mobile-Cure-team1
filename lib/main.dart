@@ -8,21 +8,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'app.dart';
 
 void main() async {
+  
   WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = AppBlocObserver();
   await SharedPref().instantiatePreferences();
   await setupInjector();
-
-  //عشان لما التلفون يقلب على الجمب البرنامج  ميقلبش معاه
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp],
   );
   runApp(
-    DevicePreview(
-      builder: (context) => const DocApp(), // Wrap your app
-    ),
+    const DocApp(), // Wrap your app
+    
   );
 }
 
-//new

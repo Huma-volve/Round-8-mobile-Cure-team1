@@ -1,7 +1,6 @@
 import 'dart:async';
-import 'package:cure_team_1/core/theme/app_colors.dart';
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/utils/app_images.dart';
-import 'package:cure_team_1/features/Home/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   List<bool> dotVisible = [true, false, false, false];
   int activeIndex = 0;
   Timer? _timer;
+  final PageController pageController = PageController();
 
   @override
   void initState() {
@@ -32,20 +32,21 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () async {
       if (!mounted) return;
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const HomePage()));
+          MaterialPageRoute(builder: (_) => const OnboaedingScreen()));
     });
   }
 
   @override
   void dispose() {
     _timer?.cancel();
+    pageController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryColor,
+      backgroundColor: ColorsLight.primaryColor,
       body: Stack(
         alignment: Alignment.center,
         children: [
@@ -59,8 +60,8 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           Positioned(
             bottom: 0.08.sh,
-            child: AnimatedSmoothIndicator(
-              activeIndex: activeIndex,
+            child: SmoothPageIndicator(
+              controller: pageController,
               count: 4,
               effect: ScaleEffect(
                 activeDotColor: Colors.white,

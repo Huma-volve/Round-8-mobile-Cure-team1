@@ -2,9 +2,13 @@
 class Assets {
   Assets._();
   
+  static const String resourceImagesActiveCheckedIcon = "assets/images/active_checked_icon.png";
+
   static const String resourceImagesAddReview = "assets/images/add_review.png";
 
   static const String resourceImagesAltArrowDown = "assets/images/Alt_Arrow_Down.png";
+
+  static const String resourceImagesApplePay = "assets/images/apple-pay.png";
 
   static const String resourceImagesArrowImage = "assets/images/arrow_image.png";
 
@@ -50,6 +54,8 @@ class Assets {
 
   static const String resourceImagesPaperclip = "assets/images/Paperclip.svg";
 
+  static const String resourceImagesPaypal = "assets/images/paypal.png";
+
   static const String resourceImagesPin = "assets/images/Pin.svg";
 
   static const String resourceImagesProfile2user = "assets/images/profile-2user.png";
@@ -75,6 +81,8 @@ class Assets {
   static const String resourceImagesTurner = "assets/images/turner.png";
 
   static const String resourceImagesUserComment = "assets/images/user_comment.png";
+
+  static const String resourceImagesVisa = "assets/images/visa.png";
 
   static const String resourceImagesVolumeCross = "assets/images/Volume_Cross.svg";
 

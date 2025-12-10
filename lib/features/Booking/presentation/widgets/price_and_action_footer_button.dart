@@ -1,16 +1,16 @@
 
-import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/custom_elevated_button.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/price_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+
 
 class PriceAndBookActionFooterButton extends StatelessWidget {
   const PriceAndBookActionFooterButton({
-    super.key,
+    super.key, required this.buttonName, this.onPressed,
   });
-
+final String buttonName;
+final  Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -28,7 +28,7 @@ class PriceAndBookActionFooterButton extends StatelessWidget {
            children: [
          const    PriceWidget(),
          SizedBox(height: 15.h,),
-              CustomElevatedButton(title: 'Book Appointment',onPressed: () => context.go(AppRoute.bookappointment),)      
+              CustomElevatedButton(onPressed:  onPressed, buttonName: buttonName,)      
            ],
           ),
         ),

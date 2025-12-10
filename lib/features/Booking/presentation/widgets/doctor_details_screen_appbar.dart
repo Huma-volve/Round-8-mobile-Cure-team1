@@ -3,6 +3,8 @@ import 'package:cure_team_1/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/style/images/app_images.dart';
+
 class DoctorDetailsScreenAppBar extends StatelessWidget {
   const DoctorDetailsScreenAppBar({
     super.key,
@@ -15,7 +17,7 @@ class DoctorDetailsScreenAppBar extends StatelessWidget {
         Container(
           height: 24.h,
           width: 24.w,
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
               image: DecorationImage(image: AssetImage(AppImages.arrow))),
         ),
         const Spacer(),

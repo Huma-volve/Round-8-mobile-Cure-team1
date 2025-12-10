@@ -1,8 +1,10 @@
 
 
-import 'package:cure_team_1/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../../core/style/images/app_images.dart';
 
 class DoctorImage extends StatelessWidget {
   const DoctorImage({
@@ -31,7 +33,7 @@ class DoctorImage extends StatelessWidget {
           child: Container(
             height: 24.h,
             width: 24.w,
-            decoration:const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(image: 
               AssetImage(AppImages.checked))
             ),

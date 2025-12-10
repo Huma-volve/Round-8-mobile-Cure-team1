@@ -25,8 +25,41 @@ class OtpViewBody extends StatelessWidget {
             style: AppTextStyles.styleMedium16,
           ),
           OtpItem(),
+          Column(
+            children: [
+              Text(
+                'Wrong code',
+                style: AppTextStyles.styleRegular14.copyWith(color: Colors.red),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Resend',
+                      style: AppTextStyles.styleRegular14
+                          .copyWith(color: ColorsLight.primaryColor),
+                    ),
+                  ),
+                  Text(
+                    'or',
+                    style: AppTextStyles.styleRegular14,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Enter another phone number',
+                      style: AppTextStyles.styleRegular14
+                          .copyWith(color: ColorsLight.primaryColor),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
           SizedBox(
-            height: 96.h,
+            height: 60.h,
           ),
           CustomeButton(
               text: 'Verify', color: ColorsLight.primaryColor, onTap: () {})

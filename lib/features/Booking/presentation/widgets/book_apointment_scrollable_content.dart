@@ -21,7 +21,7 @@ class BookAppointementScrollableContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 16.h,),
-                const BookingAppBar(title: 'Book Appointment',ismessageIconEnable: false,),
+                const DoctorDetailsAppBar(title: 'Book Appointment',ismessageIconEnable: false,),
                  SizedBox(height: 35.h,),
                 const DoctorDetailsWidget(),
                  SizedBox(height: 24.h,),

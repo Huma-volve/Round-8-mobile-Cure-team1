@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-class BookingAppBar extends StatelessWidget {
-  const BookingAppBar({
+class DoctorDetailsAppBar extends StatelessWidget {
+  const DoctorDetailsAppBar({
     super.key, required this.title,  this.ismessageIconEnable=false,
   });
 final String title;

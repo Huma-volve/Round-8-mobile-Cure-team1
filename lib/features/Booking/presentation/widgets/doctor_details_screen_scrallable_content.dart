@@ -23,7 +23,7 @@ class DoctorDetailsScreenScrollableContent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 16.h,),
-            const BookingAppBar(title:  'Doctor Details',),
+            const DoctorDetailsAppBar(title:  'Doctor Details',),
             const DoctorDetailsWidget(),
            SizedBox(height: 16.h,),
            const ReviewAndRatingSection(),

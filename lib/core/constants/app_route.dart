@@ -6,4 +6,5 @@ class AppRoute {
 
   static const bookPage = "/";
     static const bookappointment = "/bookappointment";
+    static const selectPaymentMethodPage = "/selectPaymentMethodPage";
 }

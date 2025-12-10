@@ -1,6 +1,7 @@
 import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/book_apointmennt_.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/doctor_details_screen.dart';
+import 'package:cure_team_1/features/Booking/presentation/screens/select_payment_method_screen.dart';
 import 'package:cure_team_1/features/auth/login/presentation/pages/login_page.dart';
 import 'package:cure_team_1/features/auth/otp/presentation/pages/otp_page.dart';
 import 'package:cure_team_1/features/auth/sign_up/presentation/pages/sign_up_page.dart';
@@ -17,6 +18,10 @@ final GoRouter router = GoRouter(
      GoRoute(
       path: AppRoute.bookappointment,
       builder: (context, state) => const Bookappointment(),
+    ),
+      GoRoute(
+      path: AppRoute.selectPaymentMethodPage,
+      builder: (context, state) => const SelectPaymentMethodScreen(),
     ),
     GoRoute(
       path: AppRoute.bookPage,

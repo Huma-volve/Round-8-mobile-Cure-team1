@@ -20,12 +20,15 @@ class Histroychat extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(5.0),
           child: ListTile(
-            leading: Container(
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-              ),
-              child: Image.asset(
-                massage!.image,
+            leading: SizedBox(
+              height: 60.h,
+              width: 50.w,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: Image.asset(
+                  massage!.image,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             title: Column(

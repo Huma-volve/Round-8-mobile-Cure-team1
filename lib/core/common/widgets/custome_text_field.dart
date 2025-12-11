@@ -8,11 +8,13 @@ class CustomeTextField extends StatefulWidget {
     required this.text,
     this.perfixIcon,
     this.suffixIcon,
+    this.focusnode,
     required this.controller,
   });
   final String text;
   final Widget? perfixIcon;
   final Widget? suffixIcon;
+  final FocusNode? focusnode;
   final TextEditingController controller;
 
   @override
@@ -30,16 +32,19 @@ class _CustomeTextFieldState extends State<CustomeTextField> {
       child: Padding(
         padding: const EdgeInsets.all(4),
         child: TextFormField(
+          focusNode: widget.focusnode,
           controller: widget.controller,
           keyboardType: TextInputType.emailAddress,
           obscureText: false,
+          autofocus: false,
           decoration: InputDecoration(
-              hintText: widget.text,
-              hintStyle: AppTextStyles.styleMedium17,
-              prefixIcon: widget.perfixIcon,
-              suffixIcon: widget.suffixIcon,
-              border: InputBorder.none,
-              enabledBorder: InputBorder.none),
+            hintText: widget.text,
+            hintStyle: AppTextStyles.styleMedium17,
+            prefixIcon: widget.perfixIcon,
+            suffixIcon: widget.suffixIcon,
+            border: InputBorder.none,
+            enabledBorder: InputBorder.none,
+          ),
         ),
       ),
     );

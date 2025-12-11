@@ -1,8 +1,8 @@
+import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/theme/app_theme.dart';
 import '../../../core/widgets/custom_widgets.dart';
 
 class PasswordManagementScreen extends StatefulWidget {

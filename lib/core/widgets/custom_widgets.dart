@@ -1,6 +1,6 @@
+import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../theme/app_theme.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;

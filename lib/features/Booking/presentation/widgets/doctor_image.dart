@@ -1,8 +1,6 @@
-
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 class DoctorImage extends StatelessWidget {
   const DoctorImage({
@@ -14,16 +12,13 @@ class DoctorImage extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        
-        
         Container(
           height: 113.h,
           width: 113.w,
           decoration: BoxDecoration(
-         
-            borderRadius: BorderRadius.circular(60),
-            image: const DecorationImage(image: AssetImage(Assets.resourceImagesDoctor))
-          ),
+              borderRadius: BorderRadius.circular(60),
+              image: const DecorationImage(
+                  image: AssetImage(Assets.resourceImagesDoctor))),
         ),
         Positioned(
           bottom: 5.h,
@@ -32,9 +27,8 @@ class DoctorImage extends StatelessWidget {
             height: 24.h,
             width: 24.w,
             decoration: const BoxDecoration(
-              image: DecorationImage(image: 
-              AssetImage(Assets.resourceImagesCheckedImage))
-            ),
+                image: DecorationImage(
+                    image: AssetImage(Assets.resourceImagesCheckedImage))),
           ),
         ),
       ],

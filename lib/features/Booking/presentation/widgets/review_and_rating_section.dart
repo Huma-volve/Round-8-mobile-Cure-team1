@@ -1,4 +1,3 @@
-
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:cure_team_1/features/Booking/data/models/review_and_rating_section_model.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/review_and_rating_section_item.dart';
@@ -14,25 +13,39 @@ class ReviewAndRatingSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-         SizedBox(
-          width: 58.w,
-          child: ReviewAndRatingSectionItem(reviewAndRatingSectionModel: ReviewAndRatingSectionModel(image: Assets.resourceImagesProfile2user, data: 2.000, title: 'patients'),)),
-       const  Spacer(),
-        SizedBox( 
+        SizedBox(
+            width: 58.w,
+            child: ReviewAndRatingSectionItem(
+              reviewAndRatingSectionModel: ReviewAndRatingSectionModel(
+                  image: Assets.paymentIcOutlinePaypal,
+                  data: 2.000,
+                  title: 'patients'),
+            )),
+        const Spacer(),
+        SizedBox(
             width: 78.w,
-           child: ReviewAndRatingSectionItem(reviewAndRatingSectionModel: ReviewAndRatingSectionModel(image: Assets.resourceImagesExperiance, data: 10, title: 'experience'),)),
-    
-       const  Spacer(),
-       SizedBox(
-          width: 55.91.w,
-        child: ReviewAndRatingSectionItem(reviewAndRatingSectionModel: ReviewAndRatingSectionModel(image: Assets.resourceImagesStar, data: 4.5, title: 'rating'),)),
-           const  Spacer(),
+            child: ReviewAndRatingSectionItem(
+              reviewAndRatingSectionModel: ReviewAndRatingSectionModel(
+                  image: Assets.resourceImagesExperiance,
+                  data: 10,
+                  title: 'experience'),
+            )),
+        const Spacer(),
+        SizedBox(
+            width: 55.91.w,
+            child: ReviewAndRatingSectionItem(
+              reviewAndRatingSectionModel: ReviewAndRatingSectionModel(
+                  image: Assets.resourceImagesStar, data: 4.5, title: 'rating'),
+            )),
+        const Spacer(),
         SizedBox(
             width: 56.w,
-          child: ReviewAndRatingSectionItem(reviewAndRatingSectionModel: ReviewAndRatingSectionModel(image: Assets.resourceImagesReviews, data: 1.872, title: 'reviews'),)),
-    
-    
-       
+            child: ReviewAndRatingSectionItem(
+              reviewAndRatingSectionModel: ReviewAndRatingSectionModel(
+                  image: Assets.resourceImagesReviews,
+                  data: 1.872,
+                  title: 'reviews'),
+            )),
       ],
     );
   }

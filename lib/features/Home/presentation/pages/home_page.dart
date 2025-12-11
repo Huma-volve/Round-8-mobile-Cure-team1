@@ -1,4 +1,3 @@
-import 'package:cure_team_1/core/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:cure_team_1/features/Home/presentation/pages/search_page.dart';
 import 'package:cure_team_1/features/Home/presentation/pages/veiw_all_specialties.dart';
@@ -11,6 +10,7 @@ import 'package:cure_team_1/features/profile/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../Data/models/doctor_model.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -112,8 +112,9 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0, // Profile selected
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppColors.primaryBlue,
-        unselectedItemColor: AppColors.error,
+        selectedItemColor:      Color(0xFF196EEE),
+
+        unselectedItemColor: Colors.redAccent,
         showUnselectedLabels: true,
         onTap: (index) {
           if (index == 0) {
@@ -165,15 +166,15 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               Assets.profileProfile, // Use correct profile asset
-              colorFilter: const ColorFilter.mode(
-                AppColors.primaryBlue,
+              colorFilter: ColorFilter.mode(
+                Color(0xFF196EEE),
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: SvgPicture.asset(
               Assets.profileProfile,
               colorFilter: const ColorFilter.mode(
-                AppColors.primaryBlue,
+                Color(0xFF196EEE),
                 BlendMode.srcIn,
               ),
             ),

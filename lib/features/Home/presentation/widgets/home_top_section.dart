@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../core/constants/app_route.dart';
 import '../pages/favorite_page.dart';
 class HomeTopSection extends StatelessWidget {
   const HomeTopSection({super.key});
@@ -15,14 +17,29 @@ class HomeTopSection extends StatelessWidget {
          Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              const Text("Welcome back, Rahma", style: TextStyle(fontWeight: FontWeight.bold)),
+
+               const Text("Welcome back, Rahma", style: TextStyle(fontWeight: FontWeight.bold)),
+              const SizedBox(height: 4),
               Row(
                 children: [
                   const Icon(Icons.location_on_outlined, size: 16),
-                  TextButton(onPressed: (){
-
-                  }, child: const Text("129, El-Nasr Street, Cairo")),
+                  SizedBox(height: 4),
+                  TextButton(
+                    onPressed: () {
+                      GoRouter.of(context).push('/map');
+                    },
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      minimumSize: Size(0, 0),
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    child: const Text(
+                      "129, El-Nasr Street, Cairo",
+                      style: TextStyle(fontSize: 14),
+                    ),
+                  ),
                 ],
               ),
             ],

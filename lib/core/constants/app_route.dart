@@ -7,5 +7,7 @@ class AppRoute {
   static const doctorDetails = "/doctorDetails";
     static const bookappointment = "/bookappointment";
     static const selectPaymentMethodScreen = "/selectPaymentMethodPage";
-        static const addReviewScreen = "/addreviewScreeb";
+  static const addReviewScreen = "/addreviewScreeb";
+  static const myBookingScreen = "/myBookingScreen";
+ static const myBookingitemSsceen = "/myBookingitemSsceen";
 }

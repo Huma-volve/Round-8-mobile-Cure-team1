@@ -8,6 +8,8 @@ class Assets {
 
   static const String resourceImagesAddReview = "assets/images/add_review.png";
 
+  static const String resourceImagesAlert02 = "assets/images/alert-02.png";
+
   static const String resourceImagesAltArrowDown = "assets/images/Alt_Arrow_Down.png";
 
   static const String resourceImagesApplePay = "assets/images/apple-pay.png";
@@ -27,6 +29,8 @@ class Assets {
   static const String resourceImagesDoctor = "assets/images/doctor.png";
 
   static const String resourceImagesDot = "assets/images/dot.svg";
+
+  static const String resourceImagesDownArrow = "assets/images/down_arrow.png";
 
   static const String resourceImagesExperiance = "assets/images/experiance.png";
 
@@ -74,6 +78,10 @@ class Assets {
 
   static const String resourceImagesStar = "assets/images/star.png";
 
+  static const String resourceImagesStarEmpty = "assets/images/star_empty.png";
+
+  static const String resourceImagesStarFull = "assets/images/star_full.png";
+
   static const String resourceImagesTime = "assets/images/time.png";
 
   static const String resourceImagesTrashBinTrash = "assets/images/Trash_Bin_Trash.svg";
@@ -85,6 +93,8 @@ class Assets {
   static const String resourceImagesVisa = "assets/images/visa.png";
 
   static const String resourceImagesVolumeCross = "assets/images/Volume_Cross.svg";
+
+  static const String resourceImagesWarning = "assets/images/warning.png";
 
   static const String resourceImagesZzzz = "assets/images/zzzz.png";
 }

@@ -1,8 +1,11 @@
 import 'package:cure_team_1/core/constants/app_route.dart';
-import 'package:cure_team_1/features/Booking/presentation/screens/add_review_screen.dart';
-import 'package:cure_team_1/features/Booking/presentation/screens/book_apointmennt_.dart';
-import 'package:cure_team_1/features/Booking/presentation/screens/doctor_details_screen.dart';
-import 'package:cure_team_1/features/Booking/presentation/screens/select_payment_method_screen.dart';
+import 'package:cure_team_1/features/booking/data/models/myBooking_model.dart';
+import 'package:cure_team_1/features/booking/presentation/screen/my_book_item_screen.dart';
+import 'package:cure_team_1/features/booking/presentation/screen/my_booking_screen.dart';
+import 'package:cure_team_1/features/doctor_details/presentation/screens/add_review_screen.dart';
+import 'package:cure_team_1/features/doctor_details/presentation/screens/book_apointmennt_.dart';
+import 'package:cure_team_1/features/doctor_details/presentation/screens/doctor_details_screen.dart';
+import 'package:cure_team_1/features/doctor_details/presentation/screens/select_payment_method_screen.dart';
 import 'package:cure_team_1/features/auth/login/presentation/pages/login_page.dart';
 import 'package:cure_team_1/features/auth/otp/presentation/pages/otp_page.dart';
 import 'package:cure_team_1/features/auth/sign_up/presentation/pages/sign_up_page.dart';
@@ -10,7 +13,7 @@ import 'package:cure_team_1/features/splash/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: AppRoute.splash,
+  initialLocation: AppRoute.myBookingScreen,
   routes: [
     GoRoute(
       path: AppRoute.splash,
@@ -19,6 +22,17 @@ final GoRouter router = GoRouter(
      GoRoute(
       path: AppRoute.bookappointment,
       builder: (context, state) => const Bookappointment(),
+    ),
+    GoRoute(
+      path: AppRoute.myBookingScreen,
+      builder: (context, state) => const MyBookingScreen(),
+    ),
+     GoRoute(
+      path: AppRoute.myBookingitemSsceen,
+      builder: (context, state) {
+final mybokkingModel=state.extra as MybookingModel;
+        return  MyBookItemScreen(mybookingModel: mybokkingModel,);
+      },
     ),
       GoRoute(
       path: AppRoute.selectPaymentMethodScreen,

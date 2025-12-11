@@ -28,6 +28,22 @@ class AppTextStyles {
     fontFamily: 'Montserrat',
     color: ColorsLight.blueGray
   );
+  static TextStyle interRegular14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Inter_28pt',
+  );
+  static TextStyle interMedum16 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+      fontFamily: 'Inter_28pt',
+  );
+  static TextStyle interSemiBold20 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Inter_28pt',
+  );
+
   static TextStyle styleRegular20 = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,

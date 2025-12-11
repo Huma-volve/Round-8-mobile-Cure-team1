@@ -3,6 +3,7 @@ class AppRoute {
   static const loginPage = "/loginPage";
   static const signupPage = "/signupPage";
   static const otpPage = "/otpPage";
+  static const chat = "/chat";
 
   static const doctorDetails = "/doctorDetails";
     static const bookappointment = "/bookappointment";

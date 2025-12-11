@@ -16,6 +16,11 @@ class AppTextStyles {
       fontWeight: FontWeight.w500,
       fontFamily: 'Montserrat',
       color: const Color(0xff6D7379));
+  static TextStyle styleMedium17 = TextStyle(
+      fontSize: 17.sp,
+      fontWeight: FontWeight.w400,
+      fontFamily: 'Montserrat',
+      color: const Color(0xff6D7379));
 
   static TextStyle styleRegular24 = TextStyle(
     fontSize: 24.sp,
@@ -84,6 +89,11 @@ class AppTextStyles {
       color: Colors.white);
   static TextStyle stylegeorgia20 = TextStyle(
     fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'georgia',
+  );
+  static TextStyle stylegeorgia27 = TextStyle(
+    fontSize: 27.sp,
     fontWeight: FontWeight.w400,
     fontFamily: 'georgia',
   );

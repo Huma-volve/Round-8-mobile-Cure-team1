@@ -8,7 +8,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'app.dart';
 
 void main() async {
-  
   WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = AppBlocObserver();
@@ -19,7 +18,5 @@ void main() async {
   );
   runApp(
     const DocApp(), // Wrap your app
-    
   );
 }
-

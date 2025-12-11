@@ -27,7 +27,6 @@ dependencies:
   go_router: ^17.0.0
   image_picker: ^1.0.7
   intl: ^0.20.2
-  intl_phone_number_input: ^0.7.5
   mobkit_dashed_border: ^0.0.8
   permission_handler: ^11.2.0
   pinput: ^6.0.1
@@ -69,6 +68,10 @@ fonts:
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils
+  assets:
+    - assets/images/home/
+    - assets/images/chat/
+    - assets/images/profile/
   filename: assets.dart
   field_prefix: resource
   ignore_comments: true

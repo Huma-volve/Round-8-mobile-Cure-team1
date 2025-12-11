@@ -15,8 +15,10 @@ class DoctorsBySpecialtyScreen extends StatelessWidget {
         .toList();
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(specialty),
+          backgroundColor: Colors.transparent
       ),
       body: doctors.isEmpty
           ? const Center(child: Text("No doctors available"))

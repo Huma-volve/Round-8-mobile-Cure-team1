@@ -1,8 +1,15 @@
 import 'package:cure_team_1/features/Home/Data/models/doctor_model.dart';
 import 'package:flutter/material.dart';
-class DoctorItem extends StatelessWidget {
+class DoctorItem extends StatefulWidget {
   final DoctorModel doctor;
   const DoctorItem({super.key, required this.doctor});
+
+  @override
+  State<DoctorItem> createState() => _DoctorItemState();
+}
+
+class _DoctorItemState extends State<DoctorItem> {
+  bool isFavorite = false;
   @override
   Widget build(BuildContext context) {
 
@@ -35,16 +42,16 @@ class DoctorItem extends StatelessWidget {
              mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-              Text(doctor.name ),
+              Text(widget.doctor.name ),
                 Text(overflow: TextOverflow.ellipsis,
-                  "${doctor.specialty ?? ''} | ${doctor.hospital}",),
+                  "${widget.doctor.specialty ?? ''} | ${widget.doctor.hospital}",),
                 Row(
                   children: [
                     const Icon(Icons.star,size: 17,color: Colors.orange,),
                     const SizedBox(
                       width: 3,
                     ),
-                    Text(doctor.rating.toString()),
+                    Text(widget.doctor.rating.toString()),
                     const SizedBox(
                       width: 8,
                     ),
@@ -52,7 +59,7 @@ class DoctorItem extends StatelessWidget {
                     const SizedBox(
                       width: 3,
                     ),
-                    Text(doctor.date.toString()),
+                    Text(widget.doctor.date.toString()),
                   ],
                 )
 
@@ -62,8 +69,15 @@ class DoctorItem extends StatelessWidget {
             width: 12,
           ),
           Expanded(
-            child: Icon(doctor.isFavorite? Icons.favorite : Icons.favorite_border ,
-              color: Colors.red,),
+            child: InkWell(
+              onTap: (){
+                setState(() {
+                  isFavorite = !isFavorite;
+                });
+              },
+              child: Icon( isFavorite ? Icons.favorite : Icons.favorite_border,
+                color: isFavorite ? Colors.red : Colors.grey,),
+            ),
           ),
 
         ],

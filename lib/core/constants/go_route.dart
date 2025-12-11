@@ -3,18 +3,46 @@ import 'package:cure_team_1/features/Booking/presentation/screens/add_review_scr
 import 'package:cure_team_1/features/Booking/presentation/screens/book_apointmennt_.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/doctor_details_screen.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/select_payment_method_screen.dart';
+import 'package:cure_team_1/features/Home/presentation/pages/favorite_page.dart';
+import 'package:cure_team_1/features/Home/presentation/pages/home_page.dart';
+import 'package:cure_team_1/features/Home/presentation/pages/map.dart';
+import 'package:cure_team_1/features/Home/presentation/pages/search_page.dart';
+import 'package:cure_team_1/features/Home/presentation/pages/veiw_all_specialties.dart';
 import 'package:cure_team_1/features/auth/login/presentation/pages/login_page.dart';
 import 'package:cure_team_1/features/auth/otp/presentation/pages/otp_page.dart';
 import 'package:cure_team_1/features/auth/sign_up/presentation/pages/sign_up_page.dart';
+import 'package:cure_team_1/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:cure_team_1/features/splash/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: AppRoute.splash,
+  initialLocation: AppRoute.home,
   routes: [
+
     GoRoute(
       path: AppRoute.splash,
       builder: (context, state) => const SplashScreen(),
+    ),
+    GoRoute(
+      path: AppRoute.onBoarding,
+      builder: (context, state) => const OnboaedingScreen(),
+    ),
+    GoRoute(
+      path: AppRoute.home,
+      builder: (context, state) => const HomePage(),
+    ), GoRoute(
+      path: AppRoute.search,
+      builder: (context, state) => const SearchPage(),
+    ), GoRoute(
+      path: AppRoute.favorite,
+      builder: (context, state) => const FavoritePage(),
+    ), GoRoute(
+      path: AppRoute.viewAllForSpecialties,
+      builder: (context, state) => const ViewAllSpecialties(),
+    ),
+    GoRoute(
+      path: AppRoute.map,
+      builder: (context, state) => const MapPage(),
     ),
      GoRoute(
       path: AppRoute.bookappointment,

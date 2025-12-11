@@ -5,6 +5,8 @@ import 'package:cure_team_1/features/Home/presentation/widgets/doctor_item.dart'
 import 'package:cure_team_1/features/Home/presentation/widgets/home_top_section.dart';
 import 'package:cure_team_1/features/Home/presentation/widgets/specialties_list.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../core/constants/app_route.dart';
 import '../../Data/models/doctor_model.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               ),
               TextFormField(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+                  GoRouter.of(context).push('/search');
                 },
                 decoration: InputDecoration(
                   hintText: "Search for specialty, doctor..",
@@ -52,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                       ),),
                   ),
                 TextButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ViewAllSpecialties()));
+                  GoRouter.of(context).push('/viewAllForSpecialties');
                 }, child: const Text("View all",
                   style: TextStyle(
                     fontSize: 18,

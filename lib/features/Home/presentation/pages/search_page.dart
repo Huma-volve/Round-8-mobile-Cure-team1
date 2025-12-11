@@ -1,5 +1,6 @@
 import 'package:cure_team_1/features/Home/presentation/widgets/speciality_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../Data/models/specialty_model.dart';
 import '../widgets/specialties_list.dart';
@@ -10,10 +11,13 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const Text("Search"),
         leading: InkWell(onTap:(){
-          Navigator.pop(context);
+          GoRouter.of(context).pop();
         },
             child: const Icon(Icons.arrow_back_ios)),
       ),

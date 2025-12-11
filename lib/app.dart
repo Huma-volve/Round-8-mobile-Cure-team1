@@ -1,4 +1,3 @@
-import 'package:cure_team_1/core/app_router/app_router.dart';
 import 'package:cure_team_1/core/constants/go_route.dart';
 
 import 'package:flutter/material.dart';

@@ -1,6 +1,7 @@
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/features/chat/data/modle/prfiledatils.dart';
+import 'package:cure_team_1/features/chat/persention/screens/widget/imageprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,17 +21,7 @@ class Histroychat extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(5.0),
           child: ListTile(
-            leading: SizedBox(
-              height: 60.h,
-              width: 50.w,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset(
-                  massage!.image,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
+            leading: Imageprofile(image: massage!.image),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

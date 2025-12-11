@@ -1,11 +1,8 @@
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/images/app_images.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
-import 'package:cure_team_1/core/utils/app_images.dart';
-import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/style/images/app_images.dart';
 
 class MedicalSpecialty extends StatelessWidget {
   const MedicalSpecialty({
@@ -30,7 +27,7 @@ class MedicalSpecialty extends StatelessWidget {
             width: 40.w,
             decoration: BoxDecoration(
                 image: const DecorationImage(
-                    image: AssetImage(Assets.resourceImagesArrowImage)),
+                    image: AssetImage(AppImages.favorite)),
                 border: Border.all(width: 3, color: ColorsLight.offWhite),
                 borderRadius: BorderRadius.circular(40)),
           ),

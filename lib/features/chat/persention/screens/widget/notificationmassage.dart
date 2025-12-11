@@ -1,7 +1,9 @@
+import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:cure_team_1/features/chat/data/modle/prfiledatils.dart';
 import 'package:cure_team_1/features/chat/persention/screens/widget/histroychat.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Notificationmassage extends StatelessWidget {
   const Notificationmassage({super.key});
@@ -24,7 +26,10 @@ class Notificationmassage extends StatelessWidget {
     ];
     return ListView.builder(
         itemCount: all_list.length,
-        itemBuilder: (context, indx) =>
-            InkWell(onTap: () {}, child: Histroychat(massage: all_list[indx])));
+        itemBuilder: (context, indx) => InkWell(
+            onTap: () {
+              context.push(AppRoute.chatbody);
+            },
+            child: Histroychat(massage: all_list[indx])));
   }
 }

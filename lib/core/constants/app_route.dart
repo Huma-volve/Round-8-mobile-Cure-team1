@@ -4,6 +4,8 @@ class AppRoute {
   static const signupPage = "/signupPage";
   static const otpPage = "/otpPage";
   static const chat = "/chat";
+  static const chatbody = "/chatbody";
+  static const notifications = "/Notifications";
 
   static const onBoarding = "/onBoarding";
   static const home = "/home";
@@ -15,7 +17,7 @@ class AppRoute {
 
 
   static const doctorDetails = "/doctorDetails";
-    static const bookappointment = "/bookappointment";
-    static const selectPaymentMethodScreen = "/selectPaymentMethodPage";
-        static const addReviewScreen = "/addreviewScreeb";
+  static const bookappointment = "/bookappointment";
+  static const selectPaymentMethodScreen = "/selectPaymentMethodPage";
+  static const addReviewScreen = "/addreviewScreeb";
 }

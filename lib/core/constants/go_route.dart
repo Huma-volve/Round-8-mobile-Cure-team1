@@ -2,10 +2,9 @@ import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/add_review_screen.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/book_apointmennt_.dart';
 import 'package:cure_team_1/features/Booking/presentation/screens/doctor_details_screen.dart';
-import 'package:cure_team_1/features/Booking/presentation/screens/select_payment_method_screen.dart';
 import 'package:cure_team_1/features/auth/login/presentation/pages/login_page.dart';
-import 'package:cure_team_1/features/auth/otp/presentation/pages/otp_page.dart';
 import 'package:cure_team_1/features/auth/sign_up/presentation/pages/sign_up_page.dart';
+import 'package:cure_team_1/features/profile/screens/profile_screen.dart';
 import 'package:cure_team_1/features/splash/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -16,15 +15,15 @@ final GoRouter router = GoRouter(
       path: AppRoute.splash,
       builder: (context, state) => const SplashScreen(),
     ),
-     GoRoute(
+    GoRoute(
       path: AppRoute.bookappointment,
       builder: (context, state) => const Bookappointment(),
     ),
-      GoRoute(
+    GoRoute(
       path: AppRoute.selectPaymentMethodScreen,
       builder: (context, state) => const SelectPaymentMethodScreen(),
     ),
-     GoRoute(
+    GoRoute(
       path: AppRoute.addReviewScreen,
       builder: (context, state) => const AddReviewScreen(),
     ),
@@ -34,7 +33,8 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: AppRoute.loginPage,
-      builder: (context, state) => const LoginPage(),
+      // builder: (context, state) => const LoginPage(),
+      builder: (context, state) => const ProfileScreen(),
     ),
     GoRoute(
       path: AppRoute.signupPage,

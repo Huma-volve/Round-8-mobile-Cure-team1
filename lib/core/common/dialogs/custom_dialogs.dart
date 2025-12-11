@@ -24,7 +24,7 @@ class CustomDialog {
             top: 30.h,
             bottom: 20.h,
           ),
-          child: Center(
+          child: const Center(
             child: Text('data'),
           ),
         ),

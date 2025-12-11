@@ -1,5 +1,4 @@
 import 'package:cure_team_1/core/app/upload_image/repo/upload_image_repo.dart';
-import 'package:cure_team_1/core/utils/image_pick.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

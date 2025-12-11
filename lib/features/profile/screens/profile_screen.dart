@@ -194,44 +194,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 3, // Profile selected
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppColors.primaryBlue,
-        unselectedItemColor: AppColors.textGrey,
-        showUnselectedLabels: true,
-        items: [
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
-            label: 'Home',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            label: 'Booking',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.chat_bubble_outline),
-            label: 'Chat',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              Assets.profileProfile, // Use correct profile asset
-              colorFilter: const ColorFilter.mode(
-                AppColors.primaryBlue,
-                BlendMode.srcIn,
-              ),
-            ),
-            activeIcon: SvgPicture.asset(
-              Assets.profileProfile,
-              colorFilter: const ColorFilter.mode(
-                AppColors.primaryBlue,
-                BlendMode.srcIn,
-              ),
-            ),
-            label: 'Profile',
-          ),
-        ],
-      ),
     );
   }
 

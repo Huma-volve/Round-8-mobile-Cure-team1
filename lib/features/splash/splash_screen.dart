@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Center(
             child: Image.asset(
-              Assets.resourceImagesIconSplash,
+              Assets.resourceImagesSplashDot,
               width: 0.18.sw,
               height: 0.18.sw,
               color: Colors.white,

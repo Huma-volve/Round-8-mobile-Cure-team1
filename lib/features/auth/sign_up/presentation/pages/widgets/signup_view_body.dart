@@ -12,8 +12,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-
-
 // ignore: must_be_immutable
 class SignupViewBody extends StatelessWidget {
   SignupViewBody({super.key});
@@ -30,7 +28,7 @@ class SignupViewBody extends StatelessWidget {
         children: [
           Center(
             child: Image.asset(
-              Assets.resourceImagesIconSplash,
+              Assets.resourceImagesAltArrowDown,
               color: ColorsLight.primaryColor,
             ),
           ),

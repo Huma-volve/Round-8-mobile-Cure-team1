@@ -8,7 +8,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'app.dart';
 
 void main() async {
-  
   WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = AppBlocObserver();
@@ -18,8 +17,8 @@ void main() async {
     [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp],
   );
   runApp(
-    const DocApp(), // Wrap your app
-    
+    DevicePreview(
+      builder: (context) => const DocApp(), // Wrap your app
+    ),
   );
 }
-

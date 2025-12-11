@@ -1,6 +1,6 @@
+import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/theme/app_theme.dart';
 import '../../../core/widgets/custom_widgets.dart';
 import '../widgets/credit_card_widget.dart';
 import '../models/card_model.dart';
@@ -123,7 +123,6 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 expiryDate: _expiryDate,
               ),
               SizedBox(height: 32.h),
-
               Text('Cardholder Name', style: AppTextStyles.subHeader),
               SizedBox(height: 8.h),
               CustomTextField(
@@ -131,7 +130,6 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 controller: _cardHolderController,
               ),
               SizedBox(height: 24.h),
-
               Text('Card Number', style: AppTextStyles.subHeader),
               SizedBox(height: 8.h),
               CustomTextField(
@@ -145,7 +143,6 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 ),
               ),
               SizedBox(height: 24.h),
-
               Row(
                 children: [
                   Expanded(
@@ -192,7 +189,6 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   ),
                 ],
               ),
-
               SizedBox(height: 48.h),
               CustomButton(text: 'Save', onPressed: _saveCard),
             ],

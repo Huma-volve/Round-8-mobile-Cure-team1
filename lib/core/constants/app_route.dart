@@ -5,6 +5,7 @@ class AppRoute {
   static const otpPage = "/otpPage";
   static const chat = "/chat";
   static const chatbody = "/chatbody";
+  static const notifications = "/Notifications";
 
   static const doctorDetails = "/doctorDetails";
   static const bookappointment = "/bookappointment";

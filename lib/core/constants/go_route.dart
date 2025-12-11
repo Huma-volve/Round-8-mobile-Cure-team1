@@ -8,11 +8,12 @@ import 'package:cure_team_1/features/auth/otp/presentation/pages/otp_page.dart';
 import 'package:cure_team_1/features/auth/sign_up/presentation/pages/sign_up_page.dart';
 import 'package:cure_team_1/features/chat/persention/screens/chat.dart';
 import 'package:cure_team_1/features/chat/persention/screens/chatbody.dart';
+import 'package:cure_team_1/features/notifications/screen/notifications.dart';
 import 'package:cure_team_1/features/splash/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: AppRoute.chat,
+  initialLocation: AppRoute.notifications,
   routes: [
     GoRoute(
       path: AppRoute.splash,
@@ -53,6 +54,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: AppRoute.chatbody,
       builder: (context, state) => const Chatbody(),
+    ),
+    GoRoute(
+      path: AppRoute.notifications,
+      builder: (context, state) => const Notifications(),
     ),
   ],
 );

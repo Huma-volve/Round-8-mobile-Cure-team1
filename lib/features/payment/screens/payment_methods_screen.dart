@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -19,16 +21,16 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
-        title: Text('Payment Method', style: AppTextStyles.header),
+        title: Text('Payment Method', style: AppTextStyles.styleLarge16),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: AppColors.textMain,
+            color: ColorsLight.textMain,
             size: 20.sp,
           ),
           onPressed: () => Navigator.pop(context),
@@ -39,7 +41,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Credit & Debit Card', style: AppTextStyles.subHeader),
+            Text('Credit & Debit Card', style: AppTextStyles.styleLarge24),
             SizedBox(height: 16.h),
             _buildCardDisplay(
               'Debit Card',
@@ -50,13 +52,13 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
             _buildCardDisplay('Credit Card', 'Bank Name', false),
 
             SizedBox(height: 32.h),
-            Text('More Payment Options', style: AppTextStyles.subHeader),
+            Text('More Payment Options', style: AppTextStyles.styleLarge24),
             SizedBox(height: 16.h),
 
             // Wallet Options
             Container(
               decoration: BoxDecoration(
-                color: AppColors.inputFill,
+                color: ColorsLight.inputFill,
                 borderRadius: BorderRadius.circular(16.r),
               ),
               child: Column(
@@ -78,7 +80,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.grey.shade200,
-              foregroundColor: AppColors.textMain, // For text/icon color
+              foregroundColor: ColorsLight.textMain, // For text/icon color
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.r),
@@ -116,9 +118,9 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
   Widget _buildCardDisplay(String type, String title, bool isVisa) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.inputFill,
+        color: ColorsLight.inputFill,
         borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: AppColors.inputFill),
+        border: Border.all(color: ColorsLight.inputFill),
       ),
       child: ListTile(
         leading: SvgPicture.asset(
@@ -136,10 +138,10 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
         // Actually, the previous step used Assets.visa, so I stick with it.
         // For the second one, I will leave it as AppAssets.visa or check if I have mastercard. I don't.
         // I'll keep the logic simple.
-        title: Text(type, style: AppTextStyles.subHeader),
+        title: Text(type, style: AppTextStyles.styleLarge24),
         trailing: Icon(
           Icons.chevron_right,
-          color: AppColors.textGrey,
+          color: ColorsLight.textGrey,
           size: 24.sp,
         ),
       ),
@@ -164,20 +166,20 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
         child: ListTile(
           contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 4.h),
           leading: SvgPicture.asset(assetPath, width: 24.w, height: 24.w),
-          title: Text(name, style: AppTextStyles.subHeader),
+          title: Text(name, style: AppTextStyles.styleLarge24),
           trailing: Container(
             width: 20.w,
             height: 20.w,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                color: isSelected ? AppColors.primaryBlue : Colors.grey,
+                color: isSelected ? ColorsLight.primaryColor : Colors.grey,
                 width: 2.w,
               ),
             ),
             padding: EdgeInsets.all(2.r),
             child: isSelected
-                ? CircleAvatar(backgroundColor: AppColors.primaryBlue)
+                ? CircleAvatar(backgroundColor: ColorsLight.primaryColor)
                 : null,
           ),
         ),

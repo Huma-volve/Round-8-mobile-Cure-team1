@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -10,16 +12,16 @@ class FAQsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
-        title: Text('FAQs', style: AppTextStyles.header),
+        title: Text('FAQs', style: AppTextStyles.styleLarge16),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: AppColors.textMain,
+            color: ColorsLight.textMain,
             size: 20.sp,
           ),
           onPressed: () => Navigator.pop(context),
@@ -73,25 +75,25 @@ class FAQsScreen extends StatelessWidget {
   Widget _buildExpansionTile(String title, String content, bool isExpanded) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.inputFill,
+        color: ColorsLight.inputFill,
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: Theme(
         data: ThemeData().copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
-          title: Text(title, style: AppTextStyles.subHeader),
+          title: Text(title, style: AppTextStyles.styleSmall18),
           initiallyExpanded: isExpanded,
           trailing: SvgPicture.asset(
             Assets.settingsMinusSign,
             width: 24.w,
             height: 24.w,
             colorFilter: const ColorFilter.mode(
-              AppColors.textMain,
+              ColorsLight.textMain,
               BlendMode.srcIn,
             ),
           ),
           childrenPadding: EdgeInsets.fromLTRB(16.w, 0, 16.w, 16.h),
-          children: [Text(content, style: AppTextStyles.bodyGrey)],
+          children: [Text(content, style: AppTextStyles.styleLarge24)],
         ),
       ),
     );

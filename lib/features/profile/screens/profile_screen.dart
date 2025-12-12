@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -23,9 +25,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
-        title: Text('Profile', style: AppTextStyles.header),
+        title: Text('Profile', style: AppTextStyles.styleSmall26),
         centerTitle: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -45,10 +47,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ), // Placeholder
                 backgroundColor: Colors.grey,
               ),
-              title: Text('Seif Mohamed', style: AppTextStyles.header),
+              title: Text('Seif Mohamed', style: AppTextStyles.styleSmall26),
               subtitle: Text(
                 '129,El-Nasr Street, Cairo',
-                style: AppTextStyles.bodyGrey,
+                style: AppTextStyles.styleLarge18,
               ),
               trailing: Container(
                 padding: EdgeInsets.all(8.r),
@@ -59,7 +61,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Icon(
                   Icons.edit,
                   size: 20.sp,
-                  color: AppColors.primaryBlue,
+                  color: ColorsLight.primaryColor,
                 ),
               ),
               onTap: () {
@@ -74,7 +76,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             // Settings List
             Container(
               decoration: BoxDecoration(
-                color: AppColors.inputFill,
+                color: ColorsLight.inputFill,
                 borderRadius: BorderRadius.circular(16.r),
               ),
               padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
@@ -85,11 +87,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   width: 24.w,
                   height: 24.h,
                   colorFilter: const ColorFilter.mode(
-                    AppColors.textMain,
+                    ColorsLight.textMain,
                     BlendMode.srcIn,
                   ),
                 ),
-                title: Text('Notification', style: AppTextStyles.subHeader),
+                title: Text('Notification', style: AppTextStyles.styleLarge26),
                 value: _notificationEnabled,
                 activeColor: Colors.green, // As per design
                 onChanged: (val) {
@@ -194,6 +196,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 3, // Profile selected
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: ColorsLight.primaryColor,
+        unselectedItemColor: ColorsLight.textGrey,
+        showUnselectedLabels: true,
+        items: [
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.home_filled),
+            label: 'Home',
+          ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_today),
+            label: 'Booking',
+          ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.chat_bubble_outline),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              Assets.profileProfile, // Use correct profile asset
+              colorFilter: const ColorFilter.mode(
+                ColorsLight.primaryColor,
+                BlendMode.srcIn,
+              ),
+            ),
+            activeIcon: SvgPicture.asset(
+              Assets.profileProfile,
+              colorFilter: const ColorFilter.mode(
+                ColorsLight.primaryColor,
+                BlendMode.srcIn,
+              ),
+            ),
+            label: 'Profile',
+          ),
+        ],
+      ),
     );
   }
 
@@ -205,7 +245,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.inputFill,
+        color: ColorsLight.inputFill,
         borderRadius: BorderRadius.circular(16.r),
       ),
       child: ListTile(
@@ -215,14 +255,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
           width: iconWidth ?? 24.w,
           height: iconWidth ?? 24.w,
           colorFilter: const ColorFilter.mode(
-            AppColors.textMain,
+            ColorsLight.textMain,
             BlendMode.srcIn,
           ),
         ),
-        title: Text(title, style: AppTextStyles.subHeader),
+        title: Text(title, style: AppTextStyles.styleSmall26),
         trailing: Icon(
           Icons.chevron_right,
-          color: AppColors.textGrey,
+          color: ColorsLight.textGrey,
           size: 24.sp,
         ),
       ),
@@ -246,7 +286,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 style: TextStyle(
                   fontSize: 22.sp,
                   fontWeight: FontWeight.bold,
-                  color: AppColors.textMain,
+                  color: ColorsLight.textMain,
                 ),
               ),
               SizedBox(height: 8.h),
@@ -255,7 +295,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Text(
                 'Are you sure you want to log out?',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.sp, color: AppColors.textGrey),
+                style: TextStyle(fontSize: 16.sp, color: ColorsLight.textGrey),
               ),
               SizedBox(height: 24.h),
               Row(
@@ -264,7 +304,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: CustomButton(
                       text: 'Cancel',
                       backgroundColor: Colors.grey.shade300,
-                      textColor: AppColors.textMain,
+                      textColor: ColorsLight.textMain,
                       onPressed: () => Navigator.pop(context),
                     ),
                   ),

@@ -29,7 +29,7 @@ class LoginViewBody extends StatelessWidget {
             children: [
               Text(
                 'Enter your phone number',
-                style: AppTextStyles.stylegeorgia20,
+                style: AppTextStyles.styleLarge24,
               ),
             ],
           ),
@@ -62,7 +62,7 @@ class LoginViewBody extends StatelessWidget {
             children: [
               Text(
                 'Don’t have an account?   ',
-                style: AppTextStyles.styleRegular12,
+                style: AppTextStyles.styleLarge16,
               ),
               GestureDetector(
                 onTap: () {

@@ -32,8 +32,8 @@ class DoctorDetailsAppBar extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-          title,
-          style: AppTextStyles.styleRegular24,
+          'Doctor Details',
+          style: AppTextStyles.styleLarge24,
         ),
         const Spacer(),
         Visibility(

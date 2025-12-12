@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -66,16 +68,16 @@ class _CardsScreenState extends State<CardsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
-        title: Text('Cards', style: AppTextStyles.header),
+        title: Text('Cards', style: AppTextStyles.styleSmall26),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: AppColors.textMain,
+            color: ColorsLight.textMain,
             size: 20.sp,
           ),
           onPressed: () => Navigator.pop(context),
@@ -115,14 +117,14 @@ class _CardsScreenState extends State<CardsScreen> {
             height: 180.h,
           ),
           SizedBox(height: 40.h),
-          Text('Nothing to display here!', style: AppTextStyles.header),
+          Text('Nothing to display here!', style: AppTextStyles.styleLarge20),
           SizedBox(height: 12.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 48.w),
             child: Text(
               'Add your cards to make payment easier',
               textAlign: TextAlign.center,
-              style: AppTextStyles.bodyGrey.copyWith(
+              style: AppTextStyles.styleLarge16.copyWith(
                 height: 1.5,
                 fontSize: 14.sp,
               ),
@@ -150,7 +152,7 @@ class _CardsScreenState extends State<CardsScreen> {
           margin: EdgeInsets.only(bottom: 16.h),
           padding: EdgeInsets.all(16.r),
           decoration: BoxDecoration(
-            color: AppColors.inputFill,
+            color: ColorsLight.inputFill,
             borderRadius: BorderRadius.circular(12.r),
           ),
           child: Row(
@@ -176,13 +178,13 @@ class _CardsScreenState extends State<CardsScreen> {
               Expanded(
                 child: Text(
                   '${card.type} **** $last4',
-                  style: AppTextStyles.subHeader,
+                  style: AppTextStyles.styleLarge22,
                 ),
               ),
               // Radio
               Icon(
                 Icons.radio_button_checked,
-                color: AppColors.primaryBlue,
+                color: ColorsLight.primaryColor,
                 size: 24.sp,
               ),
             ],

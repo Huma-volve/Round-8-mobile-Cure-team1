@@ -8,4 +8,13 @@ class ColorsLight {
   static const Color offWhite = Color(0xffF5F6F7);
   static const Color textFieldColoe = Color(0xffF5F6F7);
   static const Color borderButton = Color(0xffBBC1C7);
+  static const Color textMain = Color(0xFF101623); // Dark text
+  static const Color textGrey = Color(0xFFA1A8B0); // Subtitles, placeholders
+  static const Color background = Colors.white;
+  static const Color scaffoldBackground = Colors.white;
+  static const Color inputFill = Color(
+    0xFFF9FAFB,
+  ); // Light grey input background
+  static const Color border = Color(0xFFE5E7EB);
+  static const Color error = Colors.redAccent;
 }

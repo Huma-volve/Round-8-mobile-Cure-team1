@@ -19,7 +19,7 @@ class MedicalSpecialty extends StatelessWidget {
         children: [
           Text(
             'Pulmonologist',
-            style: AppTextStyles.styleRegular14,
+            style: AppTextStyles.styleLarge16,
           ),
           const Spacer(),
           Container(

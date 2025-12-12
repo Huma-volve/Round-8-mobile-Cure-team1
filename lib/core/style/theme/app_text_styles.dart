@@ -11,40 +11,140 @@ class AppTextStyles {
     fontSize: 40.sp,
     fontWeight: FontWeight.w400,
   );
-  static TextStyle styleMedium16 = TextStyle(
+// 16
+  static TextStyle styleSmall16 = TextStyle(
       fontSize: 16.sp,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w300,
       fontFamily: 'Montserrat',
       color: const Color(0xff6D7379));
+  static TextStyle styleMedium16 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge16 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
 
-  static TextStyle styleRegular24 = TextStyle(
+//18
+
+  static TextStyle styleSmall18 = TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeight.w300,
+      fontFamily: 'Montserrat',
+      color: const Color(0xff6D7379));
+  static TextStyle styleMedium18 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge18 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+//20
+  static TextStyle styleSmall20 = TextStyle(
+      fontSize: 20.sp,
+      fontWeight: FontWeight.w300,
+      fontFamily: 'Montserrat',
+      color: const Color(0xff6D7379));
+  static TextStyle styleMedium20 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge20 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+//22
+  static TextStyle styleSmall22 = TextStyle(
+      fontSize: 22.sp,
+      fontWeight: FontWeight.w300,
+      fontFamily: 'Montserrat',
+      color: const Color(0xff6D7379));
+  static TextStyle styleMedium22 = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge22 = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+//24
+  static TextStyle styleSmall24 = TextStyle(
+      fontSize: 24.sp,
+      fontWeight: FontWeight.w300,
+      fontFamily: 'Montserrat',
+      color: const Color(0xff6D7379));
+  static TextStyle styleMedium24 = TextStyle(
     fontSize: 24.sp,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     fontFamily: 'Montserrat',
   );
-  static TextStyle styleRegular20 = TextStyle(
-    fontSize: 20.sp,
-    fontWeight: FontWeight.w400,
+  static TextStyle styleLarge24 = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w900,
     fontFamily: 'Montserrat',
   );
-  static TextStyle styleRegular14 = TextStyle(
-      fontSize: 14.sp,
-      fontWeight: FontWeight.w400,
+
+// 26
+  static TextStyle styleSmall26 = TextStyle(
+      fontSize: 26.sp,
+      fontWeight: FontWeight.w300,
       fontFamily: 'Montserrat',
-      color: ColorsLight.blueGray);
-  static TextStyle styleRegular12 = TextStyle(
-      fontSize: 12.sp,
-      fontWeight: FontWeight.w400,
+      color: const Color(0xff6D7379));
+  static TextStyle styleMedium26 = TextStyle(
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge26 = TextStyle(
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+// 28
+  static TextStyle styleSmall28 = TextStyle(
+      fontSize: 28.sp,
+      fontWeight: FontWeight.w300,
       fontFamily: 'Montserrat',
-      color: ColorsLight.blueGray);
-  static TextStyle styleMedium16White = TextStyle(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w500,
+      color: const Color(0xff6D7379));
+  static TextStyle styleMedium28 = TextStyle(
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge28 = TextStyle(
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+//30
+  static TextStyle styleSmall30 = TextStyle(
+      fontSize: 30.sp,
+      fontWeight: FontWeight.w300,
       fontFamily: 'Montserrat',
-      color: Colors.white);
-  static TextStyle stylegeorgia24 = TextStyle(
-    fontSize: 20.sp,
-    fontWeight: FontWeight.w400,
-    fontFamily: 'georgia',
+      color: const Color(0xff6D7379));
+  static TextStyle styleMedium30 = TextStyle(
+    fontSize: 30.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge30 = TextStyle(
+    fontSize: 30.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
   );
 }

@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -43,16 +45,16 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
-        title: Text('Password management', style: AppTextStyles.header),
+        title: Text('Password management', style: AppTextStyles.styleLarge16),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: AppColors.textMain,
+            color: ColorsLight.textMain,
             size: 20.sp,
           ),
           onPressed: () => Navigator.pop(context),
@@ -65,7 +67,7 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Current password', style: AppTextStyles.subHeader),
+              Text('Current password', style: AppTextStyles.styleLarge16),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: '********',
@@ -80,7 +82,7 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
                     _obscureCurrent
                         ? Icons.visibility_off_outlined
                         : Icons.visibility_outlined,
-                    color: AppColors.textGrey,
+                    color: ColorsLight.textGrey,
                     size: 24.sp,
                   ),
                   onPressed: () {
@@ -98,7 +100,7 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
               ),
               SizedBox(height: 24.h),
 
-              Text('New password', style: AppTextStyles.subHeader),
+              Text('New password', style: AppTextStyles.styleSmall22),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: '********',
@@ -113,7 +115,7 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
                     _obscureNew
                         ? Icons.visibility_off_outlined
                         : Icons.visibility_outlined,
-                    color: AppColors.textGrey,
+                    color: ColorsLight.textGrey,
                     size: 24.sp,
                   ),
                   onPressed: () {
@@ -135,7 +137,7 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
 
               SizedBox(height: 24.h),
 
-              Text('Confirm new password', style: AppTextStyles.subHeader),
+              Text('Confirm new password', style: AppTextStyles.styleLarge20),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: '********',
@@ -150,7 +152,7 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
                     _obscureConfirm
                         ? Icons.visibility_off_outlined
                         : Icons.visibility_outlined,
-                    color: AppColors.textGrey,
+                    color: ColorsLight.textGrey,
                     size: 24.sp,
                   ),
                   onPressed: () {

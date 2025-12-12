@@ -21,7 +21,7 @@ class DoctorDetailsScreenAppBar extends StatelessWidget {
         const Spacer(),
         Text(
           'Doctor Details',
-          style: AppTextStyles.styleRegular24,
+          style: AppTextStyles.styleLarge24,
         ),
         const Spacer(),
         Image.asset(AppImages.message),

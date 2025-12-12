@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -95,16 +97,16 @@ class _AddCardScreenState extends State<AddCardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
-        title: Text('Add New Card', style: AppTextStyles.header),
+        title: Text('Add New Card', style: AppTextStyles.styleSmall28),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: AppColors.textMain,
+            color: ColorsLight.textMain,
             size: 20.sp,
           ),
           onPressed: () => Navigator.pop(context),
@@ -123,14 +125,14 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 expiryDate: _expiryDate,
               ),
               SizedBox(height: 32.h),
-              Text('Cardholder Name', style: AppTextStyles.subHeader),
+              Text('Cardholder Name', style: AppTextStyles.styleLarge26),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: 'Cardholder Name',
                 controller: _cardHolderController,
               ),
               SizedBox(height: 24.h),
-              Text('Card Number', style: AppTextStyles.subHeader),
+              Text('Card Number', style: AppTextStyles.styleLarge26),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: 'Card Number',
@@ -138,7 +140,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 keyboardType: TextInputType.number,
                 suffixIcon: Icon(
                   Icons.credit_card,
-                  color: AppColors.textGrey,
+                  color: ColorsLight.textGrey,
                   size: 24.sp,
                 ),
               ),
@@ -149,7 +151,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Expiry Date', style: AppTextStyles.subHeader),
+                        Text('Expiry Date', style: AppTextStyles.styleLarge26),
                         SizedBox(height: 8.h),
                         Row(
                           children: [
@@ -176,7 +178,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('CVV Code', style: AppTextStyles.subHeader),
+                        Text('CVV Code', style: AppTextStyles.styleLarge26),
                         SizedBox(height: 8.h),
                         CustomTextField(
                           hintText: '123',
@@ -201,7 +203,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
   Widget _buildSmallInput(String hint, TextEditingController controller) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.inputFill,
+        color: ColorsLight.inputFill,
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: TextField(
@@ -213,7 +215,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
         decoration: InputDecoration(
           counterText: "", // Hide character counter
           hintText: hint,
-          hintStyle: AppTextStyles.bodyGrey.copyWith(fontSize: 14.sp),
+          hintStyle: AppTextStyles.styleLarge16.copyWith(fontSize: 14.sp),
           border: InputBorder.none,
           contentPadding: EdgeInsets.symmetric(vertical: 14.h),
         ),

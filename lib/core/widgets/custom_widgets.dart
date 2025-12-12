@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,7 +25,7 @@ class CustomButton extends StatelessWidget {
       height: 50.h,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor ?? AppColors.primaryBlue,
+          backgroundColor: backgroundColor ?? ColorsLight.primaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.r),
           ),
@@ -71,7 +73,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.inputFill,
+        color: ColorsLight.inputFill,
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: TextFormField(
@@ -83,7 +85,7 @@ class CustomTextField extends StatelessWidget {
         style: TextStyle(fontSize: 14.sp),
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: AppTextStyles.bodyGrey.copyWith(fontSize: 14.sp),
+          hintStyle: AppTextStyles.styleLarge18.copyWith(fontSize: 14.sp),
           border: InputBorder.none,
           contentPadding: EdgeInsets.symmetric(
             horizontal: 16.w,
@@ -91,7 +93,7 @@ class CustomTextField extends StatelessWidget {
           ),
           prefixIcon: prefixWidget ??
               (prefixIcon != null
-                  ? Icon(prefixIcon, color: AppColors.textGrey, size: 24.sp)
+                  ? Icon(prefixIcon, color: ColorsLight.textGrey, size: 24.sp)
                   : null),
           suffixIcon:
               suffixIcon, // Suffix widget sizing handled by caller or default
@@ -126,20 +128,21 @@ class SettingsTile extends StatelessWidget {
       leading: Container(
         padding: EdgeInsets.all(8.r),
         decoration: BoxDecoration(
-          color: (iconColor ?? AppColors.primaryBlue).withOpacity(0.1),
+          color: (iconColor ?? ColorsLight.primaryColor).withOpacity(0.1),
           shape: BoxShape.circle,
         ),
-        child: Icon(icon, color: iconColor ?? AppColors.textMain, size: 20.sp),
+        child:
+            Icon(icon, color: iconColor ?? ColorsLight.textMain, size: 20.sp),
       ),
       title: Text(
         title,
-        style: AppTextStyles.subHeader.copyWith(
+        style: AppTextStyles.styleLarge20.copyWith(
           fontWeight: FontWeight.w500,
           fontSize: 16.sp,
         ),
       ),
       trailing: trailing ??
-          Icon(Icons.chevron_right, color: AppColors.textGrey, size: 24.sp),
+          Icon(Icons.chevron_right, color: ColorsLight.textGrey, size: 24.sp),
     );
   }
 }

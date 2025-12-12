@@ -28,7 +28,7 @@ class CustomeButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: AppTextStyles.styleMedium16White,
+            style: AppTextStyles.styleMedium16,
           ),
         ),
       ),

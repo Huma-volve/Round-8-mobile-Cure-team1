@@ -21,7 +21,7 @@ class DoctorInfoLocation extends StatelessWidget {
         ),
         Text(
           '129,El-Nasr Street, Cairo ',
-          style: AppTextStyles.styleRegular14,
+          style: AppTextStyles.styleLarge24,
         ),
       ],
     );

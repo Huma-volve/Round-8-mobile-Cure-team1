@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -57,16 +59,16 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
-        title: Text('Edit Profile', style: AppTextStyles.header),
+        title: Text('Edit Profile', style: AppTextStyles.styleSmall26),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: AppColors.textMain,
+            color: ColorsLight.textMain,
             size: 20.sp,
           ),
           onPressed: () => Navigator.pop(context),
@@ -93,7 +95,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     child: Container(
                       padding: EdgeInsets.all(8.r),
                       decoration: BoxDecoration(
-                        color: AppColors.primaryBlue,
+                        color: ColorsLight.primaryColor,
                         shape: BoxShape.circle,
                         border: Border.all(color: Colors.white, width: 2.w),
                       ),
@@ -155,7 +157,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             const SizedBox(height: 24),
             Align(
               alignment: Alignment.centerLeft,
-              child: Text('Select your birthday', style: AppTextStyles.body),
+              child: Text('Select your birthday',
+                  style: AppTextStyles.styleLarge26),
             ),
             const SizedBox(height: 12),
             Row(
@@ -215,7 +218,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       height: 54, // Fixed height to match likely TextField height
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        color: AppColors.inputFill,
+        color: ColorsLight.inputFill,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: Colors.transparent,
@@ -227,20 +230,20 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             value: items.contains(value) ? value : null,
             hint: Text(
               hint,
-              style: AppTextStyles.bodyGrey.copyWith(fontSize: 14),
+              style: AppTextStyles.styleLarge16.copyWith(fontSize: 14),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             icon: const Icon(
               Icons.keyboard_arrow_down,
-              color: AppColors.textGrey, // Match other icons
+              color: ColorsLight.textGrey, // Match other icons
               size: 20,
             ),
             isExpanded: true,
             menuMaxHeight: 300,
             borderRadius: BorderRadius.circular(12),
             dropdownColor: Colors.white,
-            style: AppTextStyles.body.copyWith(fontSize: 14),
+            style: AppTextStyles.styleLarge16.copyWith(fontSize: 14),
             items: items.map((String val) {
               return DropdownMenuItem<String>(
                 value: val,

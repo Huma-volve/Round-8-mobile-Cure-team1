@@ -15,7 +15,7 @@ class DoctorInfo extends StatelessWidget {
       children: [
         Text(
           'Dr. Jessica Turner',
-          style: AppTextStyles.styleRegular20,
+          style: AppTextStyles.styleLarge20,
         ),
         const MedicalSpecialty(),
         const DoctorInfoLocation(),

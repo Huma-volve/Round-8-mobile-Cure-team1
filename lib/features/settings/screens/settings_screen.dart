@@ -1,3 +1,5 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -12,20 +14,20 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackground,
+      backgroundColor: ColorsLight.scaffoldBackground,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: AppColors.textMain,
+            color: ColorsLight.textMain,
             size: 20.sp,
           ),
           onPressed: () => Navigator.pop(context),
         ),
         centerTitle: true,
-        title: Text('Settings', style: AppTextStyles.header),
+        title: Text('Settings', style: AppTextStyles.georgiaH1),
       ),
       body: Padding(
         padding: EdgeInsets.all(24.0.r),
@@ -69,7 +71,7 @@ class SettingsScreen extends StatelessWidget {
   }) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.inputFill,
+        color: ColorsLight.inputFill,
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: ListTile(
@@ -77,16 +79,16 @@ class SettingsScreen extends StatelessWidget {
         leading: SvgPicture.asset(
           assetPath,
           colorFilter: const ColorFilter.mode(
-            AppColors.textMain,
+            ColorsLight.textMain,
             BlendMode.srcIn,
           ),
           width: 24.w,
           height: 24.w,
         ),
-        title: Text(title, style: AppTextStyles.subHeader),
+        title: Text(title, style: AppTextStyles.styleLarge26),
         trailing: Icon(
           Icons.chevron_right,
-          color: AppColors.textGrey,
+          color: ColorsLight.textGrey,
           size: 24.sp,
         ),
       ),
@@ -116,7 +118,7 @@ class SettingsScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 22.sp,
                   fontWeight: FontWeight.bold,
-                  color: AppColors.textMain,
+                  color: ColorsLight.textMain,
                 ),
               ),
               SizedBox(height: 8.h),
@@ -125,7 +127,7 @@ class SettingsScreen extends StatelessWidget {
               Text(
                 'Are you sure you want to delete your account?',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.sp, color: AppColors.textGrey),
+                style: TextStyle(fontSize: 16.sp, color: ColorsLight.textGrey),
               ),
               SizedBox(height: 24.h),
               Row(
@@ -134,7 +136,7 @@ class SettingsScreen extends StatelessWidget {
                     child: CustomButton(
                       text: 'Cancel',
                       backgroundColor: Colors.grey.shade300,
-                      textColor: AppColors.textMain,
+                      textColor: ColorsLight.textMain,
                       onPressed: () => Navigator.pop(context),
                     ),
                   ),

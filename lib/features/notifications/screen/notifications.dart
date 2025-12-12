@@ -26,8 +26,8 @@ class Notifications extends StatelessWidget {
                 const Spacer(),
                 Text(
                   'Notifications',
-                  style: AppTextStyles.georgiaRegular27
-                      .copyWith(color: Colors.black),
+                  style:
+                      AppTextStyles.styleLarge26.copyWith(color: Colors.black),
                 ),
                 const Spacer(),
               ],
@@ -36,12 +36,12 @@ class Notifications extends StatelessWidget {
             Image.asset(Assets.resourceImagesZzzz),
             Text(
               'Nothing to display here!',
-              style: AppTextStyles.georgiaRegular27
+              style: AppTextStyles.styleSmall26
                   .copyWith(fontSize: 23, color: Colors.black),
             ),
             Text(
               'We’ll notify you once we have new notifications.',
-              style: AppTextStyles.montserratRegular14
+              style: AppTextStyles.styleLarge16
                   .copyWith(color: const Color(0xff6D7379), fontSize: 15),
             ),
             const Spacer(),

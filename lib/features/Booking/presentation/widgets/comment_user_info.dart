@@ -1,4 +1,3 @@
-
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/comment_desplay_rate.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/comment_user_image.dart';
@@ -14,20 +13,25 @@ class CommentUserInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-      const  CommentUserImage(),
-     SizedBox(width: 9.52.w,)
-             ,  Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-    Text('Nabila Reyna',style: AppTextStyles.georgiaRegular16,),
-    Text('30 min ago',style: AppTextStyles.georgiaRegular16,),
-      ],
-     ),
-    const Spacer(),
-     const CommentDisplayRate()
-     ,
-     
-     
+        const CommentUserImage(),
+        SizedBox(
+          width: 9.52.w,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Nabila Reyna',
+              style: AppTextStyles.styleLarge24,
+            ),
+            Text(
+              '30 min ago',
+              style: AppTextStyles.styleLarge24,
+            ),
+          ],
+        ),
+        const Spacer(),
+        const CommentDisplayRate(),
       ],
     );
   }

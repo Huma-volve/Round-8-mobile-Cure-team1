@@ -39,7 +39,7 @@ class _CustomeTextFieldState extends State<CustomeTextField> {
           autofocus: false,
           decoration: InputDecoration(
             hintText: widget.text,
-            hintStyle: AppTextStyles.styleMedium17,
+            hintStyle: AppTextStyles.styleLarge20,
             prefixIcon: widget.perfixIcon,
             suffixIcon: widget.suffixIcon,
             border: InputBorder.none,

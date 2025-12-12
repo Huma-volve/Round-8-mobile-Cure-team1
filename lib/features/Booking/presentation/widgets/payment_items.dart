@@ -1,4 +1,3 @@
-
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/features/Booking/presentation/widgets/payment_method_items_implement.dart';
@@ -15,11 +14,15 @@ class PaymentMethodItems extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Payment Method',style: AppTextStyles.georgiaRegular20.copyWith(color: ColorsLight.prussianBlue),),
-        SizedBox(height: 16.h,),
-     const  PaymentMethodItemsImplement()
-      
-      
+        Text(
+          'Payment Method',
+          style: AppTextStyles.styleSmall20
+              .copyWith(color: ColorsLight.primaryColor),
+        ),
+        SizedBox(
+          height: 16.h,
+        ),
+        const PaymentMethodItemsImplement()
       ],
     );
   }

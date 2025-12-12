@@ -27,11 +27,11 @@ class Histroychat extends StatelessWidget {
               children: [
                 Text(
                   massage!.name,
-                  style: AppTextStyles.styleRegular20,
+                  style: AppTextStyles.styleMedium20,
                 ),
                 Text(
                   massage!.massage,
-                  style: AppTextStyles.styleMedium17,
+                  style: AppTextStyles.styleLarge16,
                 ),
               ],
             ),
@@ -39,8 +39,8 @@ class Histroychat extends StatelessWidget {
               children: [
                 Text(
                   massage!.time,
-                  style: AppTextStyles.styleRegular12
-                      .copyWith(color: Colors.green),
+                  style:
+                      AppTextStyles.styleLarge16.copyWith(color: Colors.green),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 8),
@@ -54,7 +54,7 @@ class Histroychat extends StatelessWidget {
                     child: Center(
                       child: Text(
                         '2',
-                        style: AppTextStyles.styleRegular12
+                        style: AppTextStyles.styleLarge16
                             .copyWith(color: Colors.white),
                       ),
                     ),

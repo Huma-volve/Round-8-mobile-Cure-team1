@@ -19,13 +19,13 @@ class AddNewCardWidge extends StatelessWidget {
           decoration: const BoxDecoration(
               border: DashedBorder.fromBorderSide(
                   dashLength: 15,
-                  side: BorderSide(color: ColorsLight.royalBlue, width: 1)),
+                  side: BorderSide(color: ColorsLight.primaryColor, width: 1)),
               borderRadius: BorderRadius.all(Radius.circular(6))),
           child: Center(
               child: Text(
             '+ Add new card',
-            style: AppTextStyles.montserratMedum16
-                .copyWith(color: ColorsLight.royalBlue),
+            style: AppTextStyles.styleLarge16
+                .copyWith(color: ColorsLight.primaryColor),
           ))),
     );
   }

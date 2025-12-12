@@ -29,7 +29,7 @@ class OtpViewBody extends StatelessWidget {
             children: [
               Text(
                 'Wrong code',
-                style: AppTextStyles.styleRegular14.copyWith(color: Colors.red),
+                style: AppTextStyles.styleLarge16.copyWith(color: Colors.red),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -38,19 +38,19 @@ class OtpViewBody extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       'Resend',
-                      style: AppTextStyles.styleRegular14
+                      style: AppTextStyles.styleLarge16
                           .copyWith(color: ColorsLight.primaryColor),
                     ),
                   ),
                   Text(
                     'or',
-                    style: AppTextStyles.styleRegular14,
+                    style: AppTextStyles.styleLarge16,
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
                       'Enter another phone number',
-                      style: AppTextStyles.styleRegular14
+                      style: AppTextStyles.styleLarge16
                           .copyWith(color: ColorsLight.primaryColor),
                     ),
                   ),

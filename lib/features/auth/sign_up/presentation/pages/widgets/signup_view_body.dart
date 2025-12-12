@@ -97,7 +97,7 @@ class SignupViewBody extends StatelessWidget {
             children: [
               Text(
                 'Already have an account!  ',
-                style: AppTextStyles.styleRegular12,
+                style: AppTextStyles.styleSmall16,
               ),
               GestureDetector(
                 onTap: () {
@@ -105,7 +105,7 @@ class SignupViewBody extends StatelessWidget {
                 },
                 child: Text(
                   'Sign in',
-                  style: AppTextStyles.styleRegular12
+                  style: AppTextStyles.styleSmall16
                       .copyWith(color: ColorsLight.primaryColor),
                 ),
               )

@@ -51,11 +51,11 @@ class OtpItem extends StatelessWidget {
               children: [
                 Text(
                   "Resend code in",
-                  style: AppTextStyles.styleRegular14,
+                  style: AppTextStyles.styleLarge16,
                 ),
                 Text(
                   ' 55 s',
-                  style: AppTextStyles.styleRegular14
+                  style: AppTextStyles.styleLarge16
                       .copyWith(color: ColorsLight.primaryColor),
                 )
               ],

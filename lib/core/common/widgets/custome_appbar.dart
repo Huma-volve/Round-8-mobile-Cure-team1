@@ -22,7 +22,7 @@ class CustomeAppbar extends StatelessWidget {
         ),
         Text(
           title,
-          style: AppTextStyles.stylegeorgia20,
+          style: AppTextStyles.styleLarge20,
         )
       ],
     );

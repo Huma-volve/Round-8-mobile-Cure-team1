@@ -13,17 +13,10 @@ class AppTextStyles {
   );
 // 16
   static TextStyle styleSmall16 = TextStyle(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
-<<<<<<< HEAD
-  static TextStyle styleMedium17 = TextStyle(
-      fontSize: 17.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
-=======
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium16 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
@@ -34,15 +27,14 @@ class AppTextStyles {
     fontWeight: FontWeight.w900,
     fontFamily: 'Montserrat',
   );
->>>>>>> origin/mahmoud_ahmed
 
 //18
 
   static TextStyle styleSmall18 = TextStyle(
-      fontSize: 18.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium18 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w500,
@@ -56,10 +48,10 @@ class AppTextStyles {
 
 //20
   static TextStyle styleSmall20 = TextStyle(
-      fontSize: 20.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium20 = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w500,
@@ -73,10 +65,10 @@ class AppTextStyles {
 
 //22
   static TextStyle styleSmall22 = TextStyle(
-      fontSize: 22.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium22 = TextStyle(
     fontSize: 22.sp,
     fontWeight: FontWeight.w500,
@@ -90,73 +82,15 @@ class AppTextStyles {
 
 //24
   static TextStyle styleSmall24 = TextStyle(
-      fontSize: 24.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium24 = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.w500,
     fontFamily: 'Montserrat',
   );
-<<<<<<< HEAD
-  static TextStyle montserratMedum16 = TextStyle(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w500,
-      fontFamily: 'Montserrat',
-      color: ColorsLight.blueGray);
-  static TextStyle styleRegular20 = TextStyle(
-    fontSize: 20.sp,
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Montserrat',
-  );
-  static TextStyle georgiaRegular20 = TextStyle(
-    fontSize: 20.sp,
-    fontWeight: FontWeight.w400,
-    fontFamily: 'georgia',
-  );
-  static TextStyle georgiaRegular40 = TextStyle(
-      fontSize: 40.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'georgia',
-      color: ColorsLight.prussianBlue);
-  static TextStyle styleRegular14 = TextStyle(
-      fontSize: 14.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'Montserrat',
-      color: ColorsLight.blueGray);
-  static TextStyle georgiaRegular14 = TextStyle(
-      fontSize: 14.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'georgia',
-      color: ColorsLight.blueGray);
-  static TextStyle georgiaRegular16 = TextStyle(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'georgia',
-      color: ColorsLight.prussianBlue);
-
-  static TextStyle georgiaSemiBold14 = TextStyle(
-      fontSize: 14.sp,
-      fontWeight: FontWeight.w600,
-      fontFamily: 'georgia',
-      color: ColorsLight.gray);
-  static TextStyle georgiaRegular27 = TextStyle(
-      fontSize: 27.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'georgia',
-      color: ColorsLight.gray);
-
-  static TextStyle montserratRegular14 = TextStyle(
-      fontSize: 14.sp,
-      fontWeight: FontWeight.w400,
-      fontFamily: 'Montserrat',
-      color: ColorsLight.blueGray);
-
-  static TextStyle styleRegular12 = TextStyle(
-      fontSize: 12.sp,
-      fontWeight: FontWeight.w400,
-=======
   static TextStyle styleLarge24 = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.w900,
@@ -165,10 +99,10 @@ class AppTextStyles {
 
 // 26
   static TextStyle styleSmall26 = TextStyle(
-      fontSize: 26.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium26 = TextStyle(
     fontSize: 26.sp,
     fontWeight: FontWeight.w500,
@@ -182,11 +116,10 @@ class AppTextStyles {
 
 // 28
   static TextStyle styleSmall28 = TextStyle(
-      fontSize: 28.sp,
-      fontWeight: FontWeight.w300,
->>>>>>> origin/mahmoud_ahmed
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium28 = TextStyle(
     fontSize: 28.sp,
     fontWeight: FontWeight.w500,
@@ -200,17 +133,10 @@ class AppTextStyles {
 
 //30
   static TextStyle styleSmall30 = TextStyle(
-      fontSize: 30.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-<<<<<<< HEAD
-      color: Colors.white);
-  static TextStyle stylegeorgia20 = TextStyle(
-    fontSize: 20.sp,
-    fontWeight: FontWeight.w400,
-    fontFamily: 'georgia',
-=======
-      color: const Color(0xff6D7379));
+    fontSize: 30.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium30 = TextStyle(
     fontSize: 30.sp,
     fontWeight: FontWeight.w500,
@@ -220,7 +146,6 @@ class AppTextStyles {
     fontSize: 30.sp,
     fontWeight: FontWeight.w900,
     fontFamily: 'Montserrat',
->>>>>>> origin/mahmoud_ahmed
   );
   static TextStyle stylegeorgia27 = TextStyle(
     fontSize: 27.sp,
@@ -233,8 +158,8 @@ class AppTextStyles {
     fontFamily: 'georgia',
   );
   static TextStyle plusJakartaSansbold16 = TextStyle(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w700,
-      fontFamily: 'PlusJakartaSans',
-      color: ColorsLight.vividYellow);
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'PlusJakartaSans',
+  );
 }

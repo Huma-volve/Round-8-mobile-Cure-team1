@@ -1,4 +1,3 @@
-
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
@@ -16,15 +15,27 @@ class ApointMentAndReschedualWidget extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          width: 20.w,
-          height: 20.h,
-          child: Image.asset(Assets.resourceImagesCalendar02)),
-      SizedBox(width: 8.w,),
-          Text('Friday,July17-4:00pm',style: AppTextStyles.montserratMedum16.copyWith(color: ColorsLight.prussianBlue,fontSize: 14),),
-         const Spacer(),
-          TextButton(onPressed: (){
-            GoRouter.of(context).pop();
-          }, child: Text('Reschedule',style: AppTextStyles.montserratRegular14.copyWith(color: ColorsLight.royalBlue),))
+            width: 20.w,
+            height: 20.h,
+            child: Image.asset(Assets.resourceImagesCalendar02)),
+        SizedBox(
+          width: 8.w,
+        ),
+        Text(
+          'Friday,July17-4:00pm',
+          style: AppTextStyles.styleLarge16
+              .copyWith(color: ColorsLight.primaryColor, fontSize: 14),
+        ),
+        const Spacer(),
+        TextButton(
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
+            child: Text(
+              'Reschedule',
+              style: AppTextStyles.styleLarge20
+                  .copyWith(color: ColorsLight.primaryColor),
+            ))
       ],
     );
   }

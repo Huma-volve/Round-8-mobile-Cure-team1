@@ -160,7 +160,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text('Select your birthday',
-                  style: AppTextStyles.styleSmall8),
+                  style: AppTextStyles.styleSmall6),
             ),
             SizedBox(height: 10.h),
             Row(

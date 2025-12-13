@@ -1,10 +1,13 @@
+import 'package:cure_team_1/core/common/widgets/custom_app_bar.dart';
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
+import 'package:cure_team_1/features/payment/widgets/build_empity_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../core/widgets/custom_widgets.dart';
 import '../models/card_model.dart';
 import 'add_card_screen.dart';
@@ -69,25 +72,17 @@ class _CardsScreenState extends State<CardsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsLight.scaffoldBackground,
-      appBar: AppBar(
-        title: Text('Cards', style: AppTextStyles.styleSmall26),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: ColorsLight.textMain,
-            size: 20.sp,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
+      appBar: CustomAppBar(
+        title: 'My Cards',
+        onPressed: () {
+          GoRouter.of(context).canPop() ? GoRouter.of(context).pop() : null;
+        },
       ),
-      body: _cards.isEmpty ? _buildEmptyState() : _buildCardList(),
+      body: _cards.isEmpty ? buildEmptyState() : buildCardList(),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(24.0.r),
         child: CustomButton(
-          text: 'Add Card',
+          text: '+  Add Card',
           onPressed: () async {
             final newCard = await Navigator.push<CardModel>(
               context,
@@ -105,40 +100,9 @@ class _CardsScreenState extends State<CardsScreen> {
     );
   }
 
-  Widget _buildEmptyState() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          // Visual representation of the card stack using SVG
-          SvgPicture.asset(
-            Assets.paymentVisa, // Replaced manual stack with Group.svg
-            width: 250.w, // Adjusted size
-            height: 180.h,
-          ),
-          SizedBox(height: 40.h),
-          Text('Nothing to display here!', style: AppTextStyles.styleLarge20),
-          SizedBox(height: 12.h),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 48.w),
-            child: Text(
-              'Add your cards to make payment easier',
-              textAlign: TextAlign.center,
-              style: AppTextStyles.styleLarge16.copyWith(
-                height: 1.5,
-                fontSize: 14.sp,
-              ),
-            ),
-          ),
-          SizedBox(height: 60.h),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildCardList() {
+  Widget buildCardList() {
     return ListView.builder(
-      padding: EdgeInsets.all(24.0.r),
+      padding: EdgeInsets.all(18.0.r),
       itemCount: _cards.length,
       itemBuilder: (context, index) {
         final card = _cards[index];
@@ -158,27 +122,17 @@ class _CardsScreenState extends State<CardsScreen> {
           child: Row(
             children: [
               // Icon
-              Container(
-                width: 40.w,
-                height: 25.h,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(4.r),
-                  border: Border.all(color: Colors.grey.shade300),
-                ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    Assets.paymentVisa, // Using generic Visa logo for now
-                    width: 32.w,
-                  ),
-                ),
+              SvgPicture.asset(
+                Assets.paymentVisa, // Using generic Visa logo for now
+                width: 18.w,
+                height: 18.w,
               ),
-              SizedBox(width: 16.w),
+              SizedBox(width: 8.w),
               // Text
               Expanded(
                 child: Text(
                   '${card.type} **** $last4',
-                  style: AppTextStyles.styleLarge22,
+                  style: AppTextStyles.styleMedium10,
                 ),
               ),
               // Radio

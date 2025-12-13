@@ -1,8 +1,11 @@
+import 'package:cure_team_1/core/common/widgets/custom_app_bar.dart';
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
+import 'package:cure_team_1/features/chat/persention/screens/widget/customabppar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../core/widgets/custom_widgets.dart';
 import '../widgets/credit_card_widget.dart';
 import '../models/card_model.dart';
@@ -98,18 +101,13 @@ class _AddCardScreenState extends State<AddCardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsLight.scaffoldBackground,
-      appBar: AppBar(
-        title: Text('Add New Card', style: AppTextStyles.styleSmall28),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: ColorsLight.textMain,
-            size: 20.sp,
-          ),
-          onPressed: () => Navigator.pop(context),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(56.h),
+        child: CustomAppBar(
+          title: 'Add New Card',
+          onPressed: () {
+            GoRouter.of(context).canPop() ? GoRouter.of(context).pop() : null;
+          },
         ),
       ),
       body: SingleChildScrollView(
@@ -125,14 +123,14 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 expiryDate: _expiryDate,
               ),
               SizedBox(height: 32.h),
-              Text('Cardholder Name', style: AppTextStyles.styleLarge26),
+              Text('Cardholder Name', style: AppTextStyles.styleMedium12),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: 'Cardholder Name',
                 controller: _cardHolderController,
               ),
               SizedBox(height: 24.h),
-              Text('Card Number', style: AppTextStyles.styleLarge26),
+              Text('Card Number', style: AppTextStyles.styleMedium12),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: 'Card Number',
@@ -151,24 +149,31 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Expiry Date', style: AppTextStyles.styleLarge26),
-                        SizedBox(height: 8.h),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: _buildSmallInput(
-                                'MM',
-                                _expiryMonthController,
+                        Text('Expiry Date', style: AppTextStyles.styleSmall12),
+                        SizedBox(height: 10.h),
+                        SizedBox(
+                          width: 60.w,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: _buildSmallInput(
+                                  'MM',
+                                  _expiryMonthController,
+                                ),
                               ),
-                            ),
-                            SizedBox(width: 8.w),
-                            Expanded(
-                              child: _buildSmallInput(
-                                'YY',
-                                _expiryYearController,
+                              Container(
+                                color: ColorsLight.gray,
+                                width: 1.w,
+                                height: 50.h,
                               ),
-                            ),
-                          ],
+                              Expanded(
+                                child: _buildSmallInput(
+                                  'YY',
+                                  _expiryYearController,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -178,7 +183,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('CVV Code', style: AppTextStyles.styleLarge26),
+                        Text('CVV Code', style: AppTextStyles.styleSmall12),
                         SizedBox(height: 8.h),
                         CustomTextField(
                           hintText: '123',
@@ -191,7 +196,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 48.h),
+              SizedBox(height: 150.h),
               CustomButton(text: 'Save', onPressed: _saveCard),
             ],
           ),
@@ -204,20 +209,20 @@ class _AddCardScreenState extends State<AddCardScreen> {
     return Container(
       decoration: BoxDecoration(
         color: ColorsLight.inputFill,
-        borderRadius: BorderRadius.circular(12.r),
+        borderRadius: BorderRadius.circular(8.r),
       ),
       child: TextField(
         controller: controller,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 14.sp),
+        style: AppTextStyles.styleSmall12,
         keyboardType: TextInputType.number,
         maxLength: 2,
         decoration: InputDecoration(
           counterText: "", // Hide character counter
           hintText: hint,
-          hintStyle: AppTextStyles.styleLarge16.copyWith(fontSize: 14.sp),
+          hintStyle: AppTextStyles.styleSmall12,
           border: InputBorder.none,
-          contentPadding: EdgeInsets.symmetric(vertical: 14.h),
+          // contentPadding: EdgeInsets.symmetric(vertical: 14.h),
         ),
       ),
     );

@@ -1,4 +1,9 @@
+import 'package:cure_team_1/core/style/colors/colors_light.dart';
+import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
+import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CreditCardWidget extends StatelessWidget {
   final String cardNumber; // e.g. "6789 4567 5432 8903"
@@ -40,41 +45,35 @@ class CreditCardWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Icon(
-                Icons.credit_card,
-                color: Colors.white,
-              ), // Placeholder for "Spenny" logo
-              const Text(
+              SvgPicture.asset(
+                  Assets.profileGroupAddCard), // Placeholder for "Spenny" logo
+              Text(
                 'VISA',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
+                style: AppTextStyles.styleLarge18.copyWith(
+                  color: ColorsLight.offWhite,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           // Chip icon placeholder
           Container(
-            width: 40,
-            height: 30,
+            width: 40.w,
+            height: 30.h,
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.3),
-              borderRadius: BorderRadius.circular(6),
+              borderRadius: BorderRadius.circular(6.r),
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             cardNumber,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 22,
-              fontWeight: FontWeight.w500,
-              letterSpacing: 2,
+            style: AppTextStyles.styleLarge18.copyWith(
+              color: ColorsLight.offWhite,
+              letterSpacing: 1,
             ),
           ),
+          SizedBox(height: 12.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

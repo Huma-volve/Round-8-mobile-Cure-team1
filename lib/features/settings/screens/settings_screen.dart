@@ -1,10 +1,15 @@
+import 'package:cure_team_1/core/common/widgets/custom_app_bar.dart';
+import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
+import 'package:cure_team_1/features/profile/widgets/build_menu_item.dart';
+import 'package:cure_team_1/features/settings/widgets/show_logout_dialog_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../core/widgets/custom_widgets.dart';
 import 'password_management_screen.dart'; // Placeholder
 
@@ -15,46 +20,32 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsLight.scaffoldBackground,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: ColorsLight.textMain,
-            size: 20.sp,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
-        centerTitle: true,
-        title: Text('Settings', style: AppTextStyles.georgiaH1),
+      appBar: CustomAppBar(
+        title: 'Settings',
+        onPressed: () {
+          GoRouter.of(context).canPop() ? GoRouter.of(context).pop() : null;
+        },
       ),
       body: Padding(
         padding: EdgeInsets.all(24.0.r),
         child: Column(
           children: [
-            _buildSettingItem(
-              context,
+            buildMenuItem(
               title: 'Password Management',
               assetPath: Assets.settingsLockKeyhole,
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const PasswordManagementScreen(),
-                  ),
-                );
+                GoRouter.of(context).push(AppRoute.passwordManagementScreen);
+                ;
               },
             ),
             SizedBox(height: 16.h),
-            _buildSettingItem(
-              context,
+            buildMenuItem(
               title: 'Delete Account',
               // Using userRounded or similar as we don't have a specific delete-user SVG
               // If 'minus-sign' was relevant I'd combine it, but simple User icon is safer fallback than broken asset
               assetPath: Assets.settingsUserRounded,
               onTap: () {
-                _showDeleteAccountDialog(context);
+                showLogoutDialogSettings(context);
               },
             ),
           ],
@@ -63,104 +54,5 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSettingItem(
-    BuildContext context, {
-    required String title,
-    required String assetPath,
-    required VoidCallback onTap,
-  }) {
-    return Container(
-      decoration: BoxDecoration(
-        color: ColorsLight.inputFill,
-        borderRadius: BorderRadius.circular(12.r),
-      ),
-      child: ListTile(
-        onTap: onTap,
-        leading: SvgPicture.asset(
-          assetPath,
-          colorFilter: const ColorFilter.mode(
-            ColorsLight.textMain,
-            BlendMode.srcIn,
-          ),
-          width: 24.w,
-          height: 24.w,
-        ),
-        title: Text(title, style: AppTextStyles.styleLarge26),
-        trailing: Icon(
-          Icons.chevron_right,
-          color: ColorsLight.textGrey,
-          size: 24.sp,
-        ),
-      ),
-    );
-  }
-
-  void _showDeleteAccountDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) => Dialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24.r),
-        ),
-        child: Padding(
-          padding: EdgeInsets.all(24.0.r),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                Icons.delete_outline,
-                size: 48.sp,
-                color: Colors.purple,
-              ), // Placeholder for the nice icon in design
-              SizedBox(height: 16.h),
-              Text(
-                'Delete account',
-                style: TextStyle(
-                  fontSize: 22.sp,
-                  fontWeight: FontWeight.bold,
-                  color: ColorsLight.textMain,
-                ),
-              ),
-              SizedBox(height: 8.h),
-              const Divider(),
-              SizedBox(height: 16.h),
-              Text(
-                'Are you sure you want to delete your account?',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.sp, color: ColorsLight.textGrey),
-              ),
-              SizedBox(height: 24.h),
-              Row(
-                children: [
-                  Expanded(
-                    child: CustomButton(
-                      text: 'Cancel',
-                      backgroundColor: Colors.grey.shade300,
-                      textColor: ColorsLight.textMain,
-                      onPressed: () => Navigator.pop(context),
-                    ),
-                  ),
-                  SizedBox(width: 16.w),
-                  Expanded(
-                    child: CustomButton(
-                      text: 'Yes, delete',
-                      onPressed: () {
-                        Navigator.pop(context);
-                        // Perform delete logic
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Account deleted successfully'),
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+//Are you sure you want to delete your account?
 }

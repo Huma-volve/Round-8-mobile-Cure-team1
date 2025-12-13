@@ -1,3 +1,4 @@
+import 'package:cure_team_1/core/common/widgets/custom_app_bar.dart';
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
@@ -5,6 +6,7 @@ import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../core/widgets/custom_widgets.dart';
 
 class PasswordManagementScreen extends StatefulWidget {
@@ -38,7 +40,7 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Password changed successfully')),
       );
-      Navigator.pop(context);
+      GoRouter.of(context).canPop() ? GoRouter.of(context).pop() : null;
     }
   }
 
@@ -46,19 +48,10 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsLight.scaffoldBackground,
-      appBar: AppBar(
-        title: Text('Password management', style: AppTextStyles.styleLarge16),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: ColorsLight.textMain,
-            size: 20.sp,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
+      appBar: CustomAppBar(
+        title: 'Password management',
+        onPressed: () =>
+            GoRouter.of(context).canPop() ? GoRouter.of(context).pop() : null,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(24.0.r),
@@ -67,23 +60,19 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Current password', style: AppTextStyles.styleLarge16),
+              Text('Current password', style: AppTextStyles.styleSmall8),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: '********',
                 obscureText: _obscureCurrent,
                 controller: _currentPasswordController,
-                prefixWidget: Padding(
-                  padding: EdgeInsets.all(12.r),
-                  child: SvgPicture.asset(Assets.settingsLockKeyhole),
-                ),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscureCurrent
                         ? Icons.visibility_off_outlined
                         : Icons.visibility_outlined,
                     color: ColorsLight.textGrey,
-                    size: 24.sp,
+                    size: 10.sp,
                   ),
                   onPressed: () {
                     setState(() {
@@ -98,25 +87,22 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
                   return null;
                 },
               ),
+
               SizedBox(height: 24.h),
 
-              Text('New password', style: AppTextStyles.styleSmall22),
+              Text('New password', style: AppTextStyles.styleSmall8),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: '********',
                 obscureText: _obscureNew,
                 controller: _newPasswordController,
-                prefixWidget: Padding(
-                  padding: EdgeInsets.all(12.r),
-                  child: SvgPicture.asset(Assets.settingsLockKeyhole),
-                ),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscureNew
                         ? Icons.visibility_off_outlined
                         : Icons.visibility_outlined,
                     color: ColorsLight.textGrey,
-                    size: 24.sp,
+                    size: 10.sp,
                   ),
                   onPressed: () {
                     setState(() {
@@ -137,23 +123,19 @@ class _PasswordManagementScreenState extends State<PasswordManagementScreen> {
 
               SizedBox(height: 24.h),
 
-              Text('Confirm new password', style: AppTextStyles.styleLarge20),
+              Text('Confirm new password', style: AppTextStyles.styleSmall8),
               SizedBox(height: 8.h),
               CustomTextField(
                 hintText: '********',
                 obscureText: _obscureConfirm,
                 controller: _confirmPasswordController,
-                prefixWidget: Padding(
-                  padding: EdgeInsets.all(12.r),
-                  child: SvgPicture.asset(Assets.settingsLockKeyhole),
-                ),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscureConfirm
                         ? Icons.visibility_off_outlined
                         : Icons.visibility_outlined,
                     color: ColorsLight.textGrey,
-                    size: 24.sp,
+                    size: 10.sp,
                   ),
                   onPressed: () {
                     setState(() {

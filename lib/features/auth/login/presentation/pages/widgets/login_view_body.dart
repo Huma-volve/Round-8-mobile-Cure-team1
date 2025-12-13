@@ -1,9 +1,9 @@
 import 'package:cure_team_1/core/constants/app_route.dart';
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
-import 'package:cure_team_1/core/utils/app_images.dart';
 import 'package:cure_team_1/core/common/widgets/custome_button.dart';
 import 'package:cure_team_1/core/common/widgets/button_with_google.dart';
+import 'package:cure_team_1/core/utils/assets.dart';
 import 'package:cure_team_1/features/auth/login/presentation/pages/widgets/divider_login.dart';
 import 'package:cure_team_1/core/common/widgets/phone_input.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class LoginViewBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Image.asset(AppImages.loginImage)),
+          Center(child: Image.asset(Assets.resourceImagesLogin)),
           SizedBox(
             height: 32.h,
           ),

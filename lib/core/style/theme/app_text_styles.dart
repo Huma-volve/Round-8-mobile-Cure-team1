@@ -11,12 +11,96 @@ class AppTextStyles {
     fontSize: 40.sp,
     fontWeight: FontWeight.w400,
   );
+  //6
+  static TextStyle styleSmall6 = TextStyle(
+    fontSize: 6.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium6 = TextStyle(
+    fontSize: 6.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge6 = TextStyle(
+    fontSize: 6.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+  //8
+  static TextStyle styleSmall8 = TextStyle(
+    fontSize: 8.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium8 = TextStyle(
+    fontSize: 8.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge8 = TextStyle(
+    fontSize: 8.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+  //10
+  static TextStyle styleSmall10 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium10 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge10 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+  //12
+  static TextStyle styleSmall12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+  //14
+  static TextStyle styleSmall14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
 // 16
   static TextStyle styleSmall16 = TextStyle(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium16 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
@@ -31,10 +115,10 @@ class AppTextStyles {
 //18
 
   static TextStyle styleSmall18 = TextStyle(
-      fontSize: 18.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium18 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w500,
@@ -48,10 +132,10 @@ class AppTextStyles {
 
 //20
   static TextStyle styleSmall20 = TextStyle(
-      fontSize: 20.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium20 = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w500,
@@ -65,10 +149,10 @@ class AppTextStyles {
 
 //22
   static TextStyle styleSmall22 = TextStyle(
-      fontSize: 22.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium22 = TextStyle(
     fontSize: 22.sp,
     fontWeight: FontWeight.w500,
@@ -82,10 +166,10 @@ class AppTextStyles {
 
 //24
   static TextStyle styleSmall24 = TextStyle(
-      fontSize: 24.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium24 = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.w500,
@@ -99,10 +183,10 @@ class AppTextStyles {
 
 // 26
   static TextStyle styleSmall26 = TextStyle(
-      fontSize: 26.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium26 = TextStyle(
     fontSize: 26.sp,
     fontWeight: FontWeight.w500,
@@ -116,10 +200,10 @@ class AppTextStyles {
 
 // 28
   static TextStyle styleSmall28 = TextStyle(
-      fontSize: 28.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium28 = TextStyle(
     fontSize: 28.sp,
     fontWeight: FontWeight.w500,
@@ -133,10 +217,10 @@ class AppTextStyles {
 
 //30
   static TextStyle styleSmall30 = TextStyle(
-      fontSize: 30.sp,
-      fontWeight: FontWeight.w300,
-      fontFamily: 'Montserrat',
-      color: const Color(0xff6D7379));
+    fontSize: 30.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
   static TextStyle styleMedium30 = TextStyle(
     fontSize: 30.sp,
     fontWeight: FontWeight.w500,
@@ -146,5 +230,20 @@ class AppTextStyles {
     fontSize: 30.sp,
     fontWeight: FontWeight.w900,
     fontFamily: 'Montserrat',
+  );
+  static TextStyle stylegeorgia27 = TextStyle(
+    fontSize: 27.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'georgia',
+  );
+  static TextStyle stylegeorgia32 = TextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'georgia',
+  );
+  static TextStyle plusJakartaSansbold16 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'PlusJakartaSans',
   );
 }

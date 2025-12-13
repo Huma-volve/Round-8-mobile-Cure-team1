@@ -1,10 +1,13 @@
+import 'package:cure_team_1/core/common/widgets/custom_app_bar.dart';
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
+import 'package:cure_team_1/features/profile/widgets/build_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../core/widgets/custom_widgets.dart';
 
 class EditProfileScreen extends StatefulWidget {
@@ -60,22 +63,16 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsLight.scaffoldBackground,
-      appBar: AppBar(
-        title: Text('Edit Profile', style: AppTextStyles.styleSmall26),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: ColorsLight.textMain,
-            size: 20.sp,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
+      appBar: CustomAppBar(
+        // title: 'Edit Profile',
+        onPressed: () {
+          GoRouter.of(context).canPop() ? GoRouter.of(context).pop() : null;
+        },
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 10.h),
+        padding: EdgeInsets.symmetric(
+          horizontal: 4.w,
+        ),
         child: Column(
           children: [
             // Profile Image
@@ -85,35 +82,40 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   CircleAvatar(
                     radius: 50.r,
                     backgroundImage: const NetworkImage(
-                      'https://i.pravatar.cc/150?u=seif',
+                      'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
                     ),
-                    backgroundColor: Colors.grey,
+                    backgroundColor: ColorsLight.offWhite,
                   ),
                   Positioned(
                     bottom: 0,
                     right: 0,
-                    child: Container(
-                      padding: EdgeInsets.all(8.r),
-                      decoration: BoxDecoration(
-                        color: ColorsLight.primaryColor,
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white, width: 2.w),
-                      ),
-                      child: SvgPicture.asset(
-                        Assets.profileCameraEdit,
-                        width: 16.w,
-                        height: 16.w,
-                        colorFilter: const ColorFilter.mode(
-                          Colors.white,
-                          BlendMode.srcIn,
-                        ),
-                      ),
+                    child: SvgPicture.asset(
+                      Assets.profileCameraEdit,
+                      width: 10.w,
+                      height: 10.w,
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 32.h),
+            SizedBox(height: 10.h),
+
+            // User Info
+            Text('Seif Mohamed', style: AppTextStyles.styleLarge8),
+            SizedBox(height: 4.h),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Icon(
+                Icons.location_on,
+                size: 8.sp,
+                color: ColorsLight.textGrey,
+              ),
+              Text(
+                '129,El-Nasr Street, Cairo',
+                style: AppTextStyles.styleSmall6
+                    .copyWith(color: ColorsLight.blueGray),
+              ),
+            ]),
+            SizedBox(height: 40.h),
 
             // Form Fields
             CustomTextField(
@@ -122,49 +124,49 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               prefixWidget: Padding(
                 padding: EdgeInsets.all(12.r),
                 child: SvgPicture.asset(
-                  Assets.profileProfile,
-                  width: 24.w,
-                  height: 24.w,
+                  Assets.profileFamiconsPerson,
+                  width: 10.w,
+                  height: 10.w,
                 ),
               ),
             ),
-            SizedBox(height: 16.h),
+            SizedBox(height: 10.h),
             CustomTextField(
               hintText: 'Email',
               controller: _emailController,
               prefixWidget: Padding(
-                padding: EdgeInsets.all(12.r),
+                padding: EdgeInsets.all(10.r),
                 child: SvgPicture.asset(
                   Assets.profileMdiEmail,
-                  width: 24.w,
-                  height: 24.w,
+                  width: 10.w,
+                  height: 10.w,
                 ),
               ),
             ),
-            SizedBox(height: 16.h),
+            SizedBox(height: 10.h),
             CustomTextField(
               hintText: 'Phone Number',
               controller: _phoneController,
               prefixWidget: Padding(
-                padding: EdgeInsets.all(12.r),
+                padding: EdgeInsets.all(10.r),
                 child: SvgPicture.asset(
                   Assets.profileFlagEgyptEdit,
-                  width: 24.w,
-                  height: 24.w,
+                  width: 10.w,
+                  height: 10.w,
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 10.h),
             Align(
               alignment: Alignment.centerLeft,
               child: Text('Select your birthday',
-                  style: AppTextStyles.styleLarge26),
+                  style: AppTextStyles.styleSmall8),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 10.h),
             Row(
               children: [
                 Expanded(
-                  child: _buildDropdown(
+                  child: buildDropdown(
                     value: _selectedDay,
                     items: _days,
                     hint: 'Day',
@@ -173,7 +175,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 const SizedBox(width: 12),
                 Expanded(
-                  child: _buildDropdown(
+                  child: buildDropdown(
                     value: _selectedMonth,
                     items: _months,
                     hint: 'Month',
@@ -182,7 +184,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 const SizedBox(width: 12),
                 Expanded(
-                  child: _buildDropdown(
+                  child: buildDropdown(
                     value: _selectedYear,
                     items: _years,
                     hint: 'Year',
@@ -203,55 +205,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               },
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildDropdown({
-    required String? value,
-    required List<String> items,
-    required String hint,
-    required ValueChanged<String?> onChanged,
-  }) {
-    return Container(
-      height: 54, // Fixed height to match likely TextField height
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      decoration: BoxDecoration(
-        color: ColorsLight.inputFill,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: Colors.transparent,
-        ), // Placeholder for potential border
-      ),
-      child: Center(
-        child: DropdownButtonHideUnderline(
-          child: DropdownButton<String>(
-            value: items.contains(value) ? value : null,
-            hint: Text(
-              hint,
-              style: AppTextStyles.styleLarge16.copyWith(fontSize: 14),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-            icon: const Icon(
-              Icons.keyboard_arrow_down,
-              color: ColorsLight.textGrey, // Match other icons
-              size: 20,
-            ),
-            isExpanded: true,
-            menuMaxHeight: 300,
-            borderRadius: BorderRadius.circular(12),
-            dropdownColor: Colors.white,
-            style: AppTextStyles.styleLarge16.copyWith(fontSize: 14),
-            items: items.map((String val) {
-              return DropdownMenuItem<String>(
-                value: val,
-                child: Text(val, overflow: TextOverflow.ellipsis),
-              );
-            }).toList(),
-            onChanged: onChanged,
-          ),
         ),
       ),
     );

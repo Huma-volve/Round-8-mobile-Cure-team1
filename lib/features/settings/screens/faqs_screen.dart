@@ -1,10 +1,13 @@
+import 'package:cure_team_1/core/common/widgets/custom_app_bar.dart';
 import 'package:cure_team_1/core/style/colors/colors_light.dart';
 import 'package:cure_team_1/core/style/theme/app_text_styles.dart';
 import 'package:cure_team_1/core/style/theme/app_theme.dart';
 import 'package:cure_team_1/core/utils/assets.dart';
+import 'package:cure_team_1/features/settings/widgets/fAQ_expansion_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class FAQsScreen extends StatelessWidget {
   const FAQsScreen({super.key});
@@ -13,58 +16,46 @@ class FAQsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsLight.scaffoldBackground,
-      appBar: AppBar(
-        title: Text('FAQs', style: AppTextStyles.styleLarge16),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: ColorsLight.textMain,
-            size: 20.sp,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
+      appBar: CustomAppBar(
+        title: 'FAQs',
+        onPressed: () {
+          GoRouter.of(context).canPop() ? GoRouter.of(context).pop() : null;
+        },
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(24.0.r),
         child: Column(
           children: [
-            _buildExpansionTile(
-              'What is this app used for?',
-              'This app allows you to search for doctors, book appointments, and consult in person easily from your phone.',
-              true,
+            const FAQExpansionTile(
+              title: 'What is this app used for?',
+              content:
+                  'This app allows you to search for doctors, book appointments, and consult in person easily from your phone.',
             ),
             SizedBox(height: 16.h),
-            _buildExpansionTile(
-              'Is the app free to use?',
-              'Yes, the app is free to download and use for booking appointments.',
-              false,
+            const FAQExpansionTile(
+              title: 'Is the app free to use?',
+              content:
+                  'Yes, the app is free to download and use for booking appointments.',
             ),
             SizedBox(height: 16.h),
-            _buildExpansionTile(
-              'How can I find a doctor?',
-              'You can search by name, specialty, or location.',
-              false,
+            const FAQExpansionTile(
+              title: 'How can I find a doctor?',
+              content: 'You can search by name, specialty, or location.',
             ),
             SizedBox(height: 16.h),
-            _buildExpansionTile(
-              'Can I cancel my appointment?',
-              'Yes, you can cancel up to 24 hours before.',
-              false,
+            const FAQExpansionTile(
+              title: 'Can I cancel my appointment?',
+              content: 'Yes, you can cancel up to 24 hours before.',
             ),
             SizedBox(height: 16.h),
-            _buildExpansionTile(
-              'What payment are supported',
-              'We support Credit Cards, PayPal, and Apple Pay.',
-              false,
+            const FAQExpansionTile(
+              title: 'What payment are supported',
+              content: 'We support Credit Cards, PayPal, and Apple Pay.',
             ),
             SizedBox(height: 16.h),
-            _buildExpansionTile(
-              'How do I edit my profile?',
-              'Go to Profile > Edit Profile.',
-              false,
+            const FAQExpansionTile(
+              title: 'How do I edit my profile?',
+              content: 'Go to Profile > Edit Profile.',
             ),
           ],
         ),
@@ -72,30 +63,44 @@ class FAQsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildExpansionTile(String title, String content, bool isExpanded) {
-    return Container(
-      decoration: BoxDecoration(
-        color: ColorsLight.inputFill,
-        borderRadius: BorderRadius.circular(12.r),
-      ),
-      child: Theme(
-        data: ThemeData().copyWith(dividerColor: Colors.transparent),
-        child: ExpansionTile(
-          title: Text(title, style: AppTextStyles.styleSmall18),
-          initiallyExpanded: isExpanded,
-          trailing: SvgPicture.asset(
-            Assets.settingsMinusSign,
-            width: 24.w,
-            height: 24.w,
-            colorFilter: const ColorFilter.mode(
-              ColorsLight.textMain,
-              BlendMode.srcIn,
-            ),
-          ),
-          childrenPadding: EdgeInsets.fromLTRB(16.w, 0, 16.w, 16.h),
-          children: [Text(content, style: AppTextStyles.styleLarge24)],
-        ),
-      ),
-    );
-  }
+  // Widget _buildExpansionTile(int index, String title, String content) {
+  //   bool isExpanded = index == 0;
+  //   return Container(
+  //     decoration: BoxDecoration(
+  //       color: ColorsLight.inputFill,
+  //       borderRadius: BorderRadius.circular(12.r),
+  //     ),
+  //     child: Theme(
+  //       data: ThemeData().copyWith(dividerColor: Colors.transparent),
+  //       child: ExpansionTile(
+  //         title: Text(title, style: AppTextStyles.styleLarge8),
+  //         initiallyExpanded: isExpanded,
+  //         trailing: isExpanded
+  //             ? SvgPicture.asset(
+  //                 Assets.settingsMinusSign,
+  //                 width: 12.w,
+  //                 height: 12.w,
+  //                 colorFilter: const ColorFilter.mode(
+  //                   ColorsLight.textMain,
+  //                   BlendMode.srcIn,
+  //                 ),
+  //               )
+  //             : SvgPicture.asset(
+  //                 Assets.paymentIcOutlinePaypal,
+  //                 width: 12.w,
+  //                 height: 12.w,
+  //                 colorFilter: const ColorFilter.mode(
+  //                   ColorsLight.textMain,
+  //                   BlendMode.srcIn,
+  //                 ),
+  //               ),
+  //         childrenPadding: EdgeInsets.fromLTRB(10.w, 0, 10.w, 10.h),
+  //         children: [
+  //           Divider(),
+  //           Text(content, style: AppTextStyles.styleSmall6)
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 }

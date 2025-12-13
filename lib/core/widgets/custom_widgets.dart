@@ -22,23 +22,20 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 50.h,
+      height: 40.h,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor ?? ColorsLight.primaryColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(10.r),
           ),
           elevation: 0,
         ),
         onPressed: onPressed,
         child: Text(
           text,
-          style: TextStyle(
-            color: textColor ?? Colors.white,
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w600,
-          ),
+          style:
+              AppTextStyles.styleSmall6.copyWith(color: ColorsLight.offWhite),
         ),
       ),
     );
@@ -74,7 +71,7 @@ class CustomTextField extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: ColorsLight.inputFill,
-        borderRadius: BorderRadius.circular(12.r),
+        borderRadius: BorderRadius.circular(10.r),
       ),
       child: TextFormField(
         controller: controller,
@@ -82,18 +79,26 @@ class CustomTextField extends StatelessWidget {
         keyboardType: keyboardType,
         validator: validator,
         onChanged: onChanged,
-        style: TextStyle(fontSize: 14.sp),
+        style: AppTextStyles.styleSmall6.copyWith(
+          color: const Color.fromARGB(255, 141, 143, 148),
+        ),
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: AppTextStyles.styleLarge18.copyWith(fontSize: 14.sp),
+          hintStyle: AppTextStyles.styleSmall6.copyWith(
+            color: ColorsLight.textGrey,
+          ),
           border: InputBorder.none,
           contentPadding: EdgeInsets.symmetric(
-            horizontal: 16.w,
-            vertical: 14.h,
+            vertical: 18.h,
+            horizontal: 4.w,
           ),
           prefixIcon: prefixWidget ??
               (prefixIcon != null
-                  ? Icon(prefixIcon, color: ColorsLight.textGrey, size: 24.sp)
+                  ? Icon(
+                      prefixIcon,
+                      color: ColorsLight.textGrey,
+                      size: 10.sp,
+                    )
                   : null),
           suffixIcon:
               suffixIcon, // Suffix widget sizing handled by caller or default

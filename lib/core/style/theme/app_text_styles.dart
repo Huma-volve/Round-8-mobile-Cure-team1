@@ -11,6 +11,90 @@ class AppTextStyles {
     fontSize: 40.sp,
     fontWeight: FontWeight.w400,
   );
+  //6
+  static TextStyle styleSmall6 = TextStyle(
+    fontSize: 6.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium6 = TextStyle(
+    fontSize: 6.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge6 = TextStyle(
+    fontSize: 6.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+  //8
+  static TextStyle styleSmall8 = TextStyle(
+    fontSize: 8.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium8 = TextStyle(
+    fontSize: 8.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge8 = TextStyle(
+    fontSize: 8.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+  //10
+  static TextStyle styleSmall10 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium10 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge10 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+  //12
+  static TextStyle styleSmall12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
+  //14
+  static TextStyle styleSmall14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleMedium14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Montserrat',
+  );
+  static TextStyle styleLarge14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Montserrat',
+  );
+
 // 16
   static TextStyle styleSmall16 = TextStyle(
     fontSize: 16.sp,

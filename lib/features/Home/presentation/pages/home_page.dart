@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../Data/models/doctor_model.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -112,7 +111,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0, // Profile selected
         type: BottomNavigationBarType.fixed,
-        selectedItemColor:      Color(0xFF196EEE),
+        selectedItemColor: Color(0xFF196EEE),
 
         unselectedItemColor: Colors.redAccent,
         showUnselectedLabels: true,

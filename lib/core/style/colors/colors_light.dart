@@ -17,5 +17,6 @@ class ColorsLight {
     0xFFF9FAFB,
   ); // Light grey input background
   static const Color border = Color(0xFFE5E7EB);
+  static const Color green = Color.fromARGB(255, 18, 176, 44);
   static const Color error = Colors.redAccent;
 }

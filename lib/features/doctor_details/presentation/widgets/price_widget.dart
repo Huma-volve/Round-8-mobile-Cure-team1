@@ -20,7 +20,10 @@ class PriceWidget extends StatelessWidget {
           text: 'Price',
           style:AppTextStyles.montserratMedum16.copyWith(fontSize: 24,color: ColorsLight.prussianBlue)
         ),
-       
+       TextSpan(
+        text: '\\',
+          style:AppTextStyles.montserratMedum16.copyWith(fontSize: 12,)
+       ),
          
                TextSpan(
           text: ' hour',
